@@ -11,7 +11,7 @@ pygments: true
 title : Ni Peng's Blog
 
 author :
-  name : Name Lastname
+  name : Peng Ni
   email : nipengmath@gmail.com
   github : nipengadmaster.github.com
   weibo : feiinniao
@@ -74,7 +74,7 @@ JB :
   atom_path : /atom.xml
   rss_path : /rss.xml
   # About me @np
-  about_path: /categories.html
+  about_path: /about.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
