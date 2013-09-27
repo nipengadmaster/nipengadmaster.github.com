@@ -6,7 +6,7 @@ title: HomePage
 
 ## Blog
 
-**My blog list:**
+**Latest Posts:**
 
 <ul class="posts">
   {% for post in site.posts %}
