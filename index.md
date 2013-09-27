@@ -4,9 +4,7 @@ title: HomePage
 ---
 {% include JB/setup %}
 
-## Blog
-
-**Latest Posts:**
+##Latest Posts:
 
 <ul class="posts">
   {% for post in site.posts %}
