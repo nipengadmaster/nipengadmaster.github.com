@@ -1,12 +1,5 @@
 #!/bin/sh
 
-$ cat whoson
-date
-echo "Users Currently Logged In"
-who
-
 git add .;
 git commit -a -m"Update"
 git push origin master;
-
-echo "git push over!"
