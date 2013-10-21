@@ -1,0 +1,7 @@
+$ cat whoson
+
+date
+
+echo "Users currently logged in"
+
+who
