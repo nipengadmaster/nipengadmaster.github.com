@@ -124,8 +124,10 @@ text-decoration: none;
 }
 
 .paginator .current-page {
-color: white;
-background: #ff0000;
+/*color: white;*/
+color: #999999;
+/*background: #ff0000;*/
+background: white;
 }
 
 .paginator a:hover{
