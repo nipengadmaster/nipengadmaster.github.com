@@ -67,6 +67,8 @@
           ref = 0;
         }
       }
+        // 将红色变成灰色
+        ref = 200
       return ref;
     });
     return toHex(rgb);
