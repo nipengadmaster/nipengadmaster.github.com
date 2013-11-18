@@ -51,38 +51,25 @@ final：
   public String toString()  `覆盖copy`
   
   public Annotation(List<CoreMap> sentences) `构造函数`
-    
-    {
-    super();
-    this.set(CoreAnnotations.SentencesAnnotation.class, sentences);
-    List<CoreLabel> tokens = new ArrayList<CoreLabel>();
-    StringBuilder text = new StringBuilder();
-    for (CoreMap sentence : sentences) {
-      List<CoreLabel> sentenceTokens = sentence.get(CoreAnnotations.TokensAnnotation.class);
-      tokens.addAll(sentenceTokens);
-      if (sentence.containsKey(CoreAnnotations.TokensAnnotation.class)) {
-        text.append(sentence.get(CoreAnnotations.TokensAnnotation.class));
-      } else {
-        // If there is no text in the sentence, fake it as best as we can
-        if (text.length() > 0) {
-          text.append("\n");
-        }
-        text.append(Sentence.listToString(sentenceTokens));
-      }
-    }
-    this.set(CoreAnnotations.TokensAnnotation.class, tokens);
-    this.set(CoreAnnotations.TextAnnotation.class, text.toString());
-    }
-
-
-
-
-
+   
 
 ### 2. edu.stanford.nlp.sentiment
 
-#### 2.1 SentimentUtils.class
+#### 2.1 CollapsUnaryTransformer.java
+
+转化器分解一元节点组成的链条，使得根节点位于最左边。因为SentimentModel不处理一元节点，因此该方法可以简化，来构造二叉树。返回新的树和新的标签。原始树不改变。
+
+*代码？*
+
+#### 2.2 Evaluate.java
 
 
-#### 2.2 SentimentTraining.class
+
+#### 2.3 ReadSentimentDataset.java
+
+### 3. edu.stanford.nlp.rnn
+
+#### 3.1 RNNCoreAnnotations.java
+
+
 
