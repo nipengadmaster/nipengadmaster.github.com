@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Scott Ni</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://nipengadmaster.github.io//feed.xml" />
-<link rel="alternate" type="text/html" href="http://nipengadmaster.github.io/" />
-<updated>2013-12-27T16:52:07+08:00</updated>
-<id>http://nipengadmaster.github.io//</id>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2013-12-27T17:27:02+08:00</updated>
+<id>/</id>
 <author>
   <name>Ni Peng</name>
-  <uri>http://nipengadmaster.github.io//</uri>
+  <uri>/</uri>
   <email>nipengmath@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Mlapp笔记]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/MLAPP笔记</id>
+  <link>/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/MLAPP笔记</id>
   <published>2013-11-20T00:00:00+08:00</published>
   <updated>2013-11-20T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h2&gt;MLAPP笔记&lt;/h2&gt;
@@ -60,19 +60,19 @@ Berkhin 2006 e-commerce cluster users&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0&quot;&gt;Mlapp笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on November 20, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0&quot;&gt;Mlapp笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on November 20, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Progit笔记]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/ProGit笔记</id>
+  <link>/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/ProGit笔记</id>
   <published>2013-11-18T00:00:00+08:00</published>
   <updated>2013-11-18T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h2&gt;《Progit中文版》&lt;/h2&gt;
@@ -280,19 +280,19 @@ git bisect good
 
 &lt;h3&gt;9.Git内部原理&lt;/h3&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0&quot;&gt;Progit笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on November 18, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0&quot;&gt;Progit笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on November 18, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Stanfordcorenlp Java代码 学习笔记]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java代码-学习笔记</id>
+  <link>/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java代码-学习笔记</id>
   <published>2013-10-28T00:00:00+08:00</published>
   <updated>2013-10-28T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h2&gt;stanford-corenlp-3.2.0b.jar&lt;/h2&gt;
@@ -360,19 +360,19 @@ final不能用于修饰构造方法。
 
 &lt;h4&gt;3.1 RNNCoreAnnotations.java&lt;/h4&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Stanfordcorenlp Java代码 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Stanfordcorenlp Java代码 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Headfirstjava 学习笔记]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/HeadFirstJava-学习笔记</id>
+  <link>/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/HeadFirstJava-学习笔记</id>
   <published>2013-10-28T00:00:00+08:00</published>
   <updated>2013-10-28T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h4&gt;1. 基本概念&lt;/h4&gt;
@@ -618,19 +618,19 @@ this.show((super)o) &amp;gt; super.show((super)o)
 &lt;/ol&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Headfirstjava 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Headfirstjava 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Dl For Nlp]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DL-for-NLP</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DL-for-NLP</id>
+  <link>/%E7%AC%94%E8%AE%B0/DL-for-NLP</link>
+  <id>/%E7%AC%94%E8%AE%B0/DL-for-NLP</id>
   <published>2013-10-18T00:00:00+08:00</published>
   <updated>2013-10-18T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h2&gt;Deep Learning for NLP(without Magic)笔记&lt;/h2&gt;
@@ -717,7 +717,7 @@ this.show((super)o) &amp;gt; super.show((super)o)
 
 &lt;h5&gt;从Maxent分类器到神经网络&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h5&gt;单个神经元计算：&lt;/h5&gt;
 
@@ -856,7 +856,7 @@ score(cat chills in a mat):&lt;/p&gt;
 &lt;p&gt;s = score(cat chills on a mat)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;s = U^T*f(Wx+b), x:20,1 W:8,20 U:8,1
-s = U^T*a 
+s = U^T*a
 a = f(z)
 z = Wx+b
 x = [x_cat x_chills x_on x_a x_mat]
@@ -909,7 +909,7 @@ x_j 称作‘局部输入信号’
 
 &lt;p&gt;对偏置单元b:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;∂/∂b_i(U_i*a_i) = U_i * ∂a_i/∂b_i 
+&lt;pre&gt;&lt;code&gt;∂/∂b_i(U_i*a_i) = U_i * ∂a_i/∂b_i
                 = U_i * f'(z_i) * ∂(W_i*x+b_i)/∂b_i
                 = delta_i
 
@@ -1230,7 +1230,7 @@ p = tanh(W[C2c1 C1c2]^T + b)
 &lt;p&gt;&lt;strong&gt;Recurrent Neural Net Language Modeling for ASR&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Mikolov et al 2011
-http://www.fit.vutbr.cz/~imikolov/rnnlm 
+http://www.fit.vutbr.cz/~imikolov/rnnlm
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Neural Net Language Modeling for ASR&lt;/strong&gt;&lt;/p&gt;
@@ -1341,19 +1341,19 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
 
 &lt;h4&gt;3.4 讨论：局限性，优势，未来研究方向&lt;/h4&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DL-for-NLP&quot;&gt;Dl For Nlp&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on October 18, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/DL-for-NLP&quot;&gt;Dl For Nlp&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 18, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[情感分析 基础理论]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/情感分析-基础理论</id>
+  <link>/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA</link>
+  <id>/%E7%AC%94%E8%AE%B0/情感分析-基础理论</id>
   <published>2013-10-17T00:00:00+08:00</published>
   <updated>2013-10-17T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;&lt;strong&gt;Ad目前工作&lt;/strong&gt;&lt;/p&gt;
@@ -1549,19 +1549,19 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
 &lt;/ol&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA&quot;&gt;情感分析 基础理论&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on October 17, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA&quot;&gt;情感分析 基础理论&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 17, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Deeplearning学习笔记]]></title>
-  <link>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
-  <id>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DeepLearning学习笔记</id>
+  <link>/%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/DeepLearning学习笔记</id>
   <published>2013-10-10T00:00:00+08:00</published>
   <updated>2013-10-10T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;h2&gt;词向量&lt;/h2&gt;
@@ -1573,19 +1573,19 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
 4. 《A scalable hierarchical distributed language model》Hinton.2008
 5. 《Statistical Language Models based on Neural Networks》&lt;a href=&quot;http://www.fit.vutbr.cz/~imikolov/rnnlm/&quot;&gt;http://www.fit.vutbr.cz/~imikolov/rnnlm/&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Deeplearning学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on October 10, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Deeplearning学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 10, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[第一篇博客]]></title>
-  <link>http://nipengadmaster.github.io//%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2</link>
-  <id>http://nipengadmaster.github.io//%E6%9D%82%E8%AE%B0/第一篇博客</id>
+  <link>/%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2</link>
+  <id>/%E6%9D%82%E8%AE%B0/第一篇博客</id>
   <published>2013-09-27T00:00:00+08:00</published>
   <updated>2013-09-27T00:00:00+08:00</updated>
   <author>
     <name>Ni Peng</name>
-    <uri>http://nipengadmaster.github.io/</uri>
+    <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;今天终于有了属于自己开发的一个博客网站。
@@ -1608,7 +1608,7 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
 &lt;p&gt;努力吧，
 为了自己！&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://nipengadmaster.github.io//%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&quot;&gt;第一篇博客&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;http://nipengadmaster.github.io/&quot;&gt;Scott Ni&lt;/a&gt; on September 27, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&quot;&gt;第一篇博客&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on September 27, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
