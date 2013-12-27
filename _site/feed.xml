@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Scott Ni</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2013-12-27T14:15:19+08:00</updated>
+<id>/</id>
+<author>
+  <name>Ni Peng</name>
+  <uri>/</uri>
+  <email>nipengmath@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Mlapp笔记]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/MLAPP笔记</id>
+  <published>2013-11-20T00:00:00+08:00</published>
+  <updated>2013-11-20T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;h2&gt;MLAPP笔记&lt;/h2&gt;
+
+&lt;h3&gt;1. Introduction&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;机器学习分为两类
+
+&lt;ul&gt;
+&lt;li&gt;预测性/有监督学习--分类/模式识别/回归/&lt;code&gt;有序回归&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;描述性/无监督学习--知识挖掘&lt;/li&gt;
+&lt;li&gt;强化学习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;分类：二分类，多分类，多标签分类。&lt;/li&gt;
+&lt;li&gt;SmartASS, Meta2010, CTR预估
+
+&lt;blockquote&gt;&lt;p&gt;google&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;非监督学习：
+
+&lt;ol&gt;
+&lt;li&gt;讨论p(xi|theta)而不是p(yi|xi, theta)&lt;/li&gt;
+&lt;li&gt;xi是特征词向量，所有需要构造出多维概率模型，对于监督学习，yi是单个变量，因此对多数监督学习，可以应用单变量的概率模型来处理，因此可以简化问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;非监督学习是人类和动物学习所特有的。应用比监督学习更广泛，因为不需要已标签数据。&lt;/li&gt;
+&lt;li&gt;标签数据不仅难得到，而且包含相对较少的信息。&lt;/li&gt;
+&lt;li&gt;model based clustering, ad hoc algorithm
+
+&lt;blockquote&gt;&lt;p&gt;google
+Berkhin 2006 e-commerce cluster users&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;LSI是PCA的变体，因为SVD&lt;/li&gt;
+&lt;li&gt;ICA是PCA的变体&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0&quot;&gt;Mlapp笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on November 20, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Progit笔记]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/ProGit笔记</id>
+  <published>2013-11-18T00:00:00+08:00</published>
+  <updated>2013-11-18T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2&gt;《Progit中文版》&lt;/h2&gt;
+
+&lt;h3&gt;1. 起步&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;git不保存前后变化的差异，而是直接快照&lt;/li&gt;
+&lt;li&gt;使用SHA-1算法计算数据的校验和&lt;/li&gt;
+&lt;li&gt;三种状态：
+
+&lt;ul&gt;
+&lt;li&gt;已提交(commited)&lt;/li&gt;
+&lt;li&gt;已修改(modified)&lt;/li&gt;
+&lt;li&gt;已暂存(staged)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置git默认编辑器&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; git config --global core.editor emacs
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;使用帮助
+
+&lt;ul&gt;
+&lt;li&gt;git help &lt;verb&gt;&lt;/li&gt;
+&lt;li&gt;git &lt;verb&gt; --help&lt;/li&gt;
+&lt;li&gt;man git &lt;verb&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;2. Git 基础&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看文件内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; cat file1
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;git diff：查看&lt;code&gt;已修改未暂存&lt;/code&gt;文件的修改&lt;/p&gt;
+
+&lt;p&gt;git diff --cached：查看&lt;code&gt;已暂存未提交&lt;/code&gt;文件的修改&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;git rm -f： 删除修改过的，并且已暂存的文件。force。&lt;/li&gt;
+&lt;li&gt;git rm --cached: 删除版本库中文件，保留工作目录中文件。&lt;/li&gt;
+&lt;li&gt;递归方式匹配文件，删除，查找
+
+&lt;blockquote&gt;&lt;p&gt;fix me&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;git mv file1 file2: git 中对文件重命名。&lt;/li&gt;
+&lt;li&gt;git log -p -2:
+
+&lt;ul&gt;
+&lt;li&gt;-p: 显示每次提交内容差异&lt;/li&gt;
+&lt;li&gt;-2: 最近两次提交&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;git log --stat: 显示摘要，增改的行数&lt;/li&gt;
+&lt;li&gt;git log:
+
+&lt;ul&gt;
+&lt;li&gt;--pretty=online 单行显示每次提交&lt;/li&gt;
+&lt;li&gt;--since=2.weeks --after显示指定时间之后的提交&lt;/li&gt;
+&lt;li&gt;--until, --before 显示指定时间之前的提交&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;git commit --amend: 修改最后一次提交&lt;/li&gt;
+&lt;li&gt;任何提交给git的数据都可以恢复，即便在已经删除的分支中的提交。可能失去的数据仅限于没有commit过的数据。&lt;/li&gt;
+&lt;li&gt;git remote -v：查看克隆的地址&lt;/li&gt;
+&lt;li&gt;git remote add pb git://*.git&lt;/li&gt;
+&lt;li&gt;git fetch: 只是将远程数据拉到本地，并不自动合并到当前分支。&lt;/li&gt;
+&lt;li&gt;git pull = fetch + merge&lt;/li&gt;
+&lt;li&gt;git remote show origin: 查看远程仓库信息&lt;/li&gt;
+&lt;li&gt;git remote rename name1 name2： 对远程分支重命名&lt;/li&gt;
+&lt;li&gt;git remote rm pb: 删除远程分支&lt;/li&gt;
+&lt;li&gt;git tag: 列出现有标签&lt;/li&gt;
+&lt;li&gt;git tag -l &quot;v1.4.2*&quot;: 列出满足匹配条件的标签&lt;/li&gt;
+&lt;li&gt;git push origin v1.5: git push不会把标签推到远程，只能手工推送。&lt;/li&gt;
+&lt;li&gt;git push origin --tags: 推送所有的标签到远程。&lt;/li&gt;
+&lt;li&gt;切换分支的时候最好保持一个清洁的工作区域。&lt;/li&gt;
+&lt;li&gt; stashing  ammending&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;3. Git分支&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;git branch -d hotfix: 删除分支&lt;/li&gt;
+&lt;li&gt;git mergetool: 图形界面的工具来解决问题。&lt;/li&gt;
+&lt;li&gt;git branch -v: 查看各分支最后一次提交&lt;/li&gt;
+&lt;li&gt;git branch --no-merged: 查看尚未合并的分支&lt;/li&gt;
+&lt;li&gt;git branch -D feature: 删除未合并的分支&lt;/li&gt;
+&lt;li&gt;git push origin 本地分支:远程分支   将本地分支推送到远程分支，可重命名&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;fetch抓回来的新的远程分支后，仍然不能在本地编辑，所有要checkout一个新的分支，对应远程分支&lt;/p&gt;
+
+&lt;p&gt;git checkout -b myserver origin/server&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;删除远程分支：git push origin :serverfix  表示将空分支推送到远程分支，即删除。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;git rebase 衍合，在一个分支上进行的操作，在另一个分支上重演。&lt;/li&gt;
+&lt;li&gt;git rebase 主分支 特性分支：检出特性分支，在主分支上重演。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;永远不要衍合那些推送到公共版本库的更新&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;4. 服务上的git&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;使用authorized_keys方法给用户授权。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;5. 分布式git&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;不要在更新中提交多余的空白符&lt;/li&gt;
+&lt;li&gt;将每次提交限制在一次逻辑单元，适当分解为多次小提交。&lt;/li&gt;
+&lt;li&gt;git add --patch
+
+&lt;blockquote&gt;&lt;p&gt;fixme&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;学习提交说明&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; git clone git://git.kernel.org/pub/scm/git/git/git
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;git diff master…contrib: 查看特性分支和它同master分支的共同祖先之间的差异。&lt;/li&gt;
+&lt;li&gt;先将代码合并到临时特性分支，等到该分支稳定下来并通过测试，再并入develop分支，然后，经时间检验，代码可以正常工作相当长的一段时间，再并入主分支发布。&lt;/li&gt;
+&lt;li&gt;大项目合并流程：
+
+&lt;ul&gt;
+&lt;li&gt;master 发布&lt;/li&gt;
+&lt;li&gt;next 用于合并基本稳定特性&lt;/li&gt;
+&lt;li&gt;pu  用于合并仍需改进特性&lt;/li&gt;
+&lt;li&gt;maint 用于出错维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;git shortlog 可以方便快捷的制作一份修改日志。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;6.Git工具&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;git reflog：查看引用日志&lt;/li&gt;
+&lt;li&gt;git show HEAD@{5}: 查看HEAD在第5次前的commit记录&lt;/li&gt;
+&lt;li&gt;git show master@{yesterday} 查看一定时间前分支在哪&lt;/li&gt;
+&lt;li&gt;git show HEAD^: 指HEAD的父提交&lt;/li&gt;
+&lt;li&gt;两点：
+
+&lt;ul&gt;
+&lt;li&gt;git log master..experiemnt：指所有“可以从experiemnt分支中获得而不能从master中获得的提交”&lt;/li&gt;
+&lt;li&gt;git log refA..refB
+&amp;lt;=&gt; git log ^refA refB
+&amp;lt;=&gt; git log refB --not refA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;三点：指定被两个引用中的一个包含但不被两者&lt;code&gt;同时&lt;/code&gt;包含的分支
+
+&lt;ul&gt;
+&lt;li&gt;git log master…experiment&lt;/li&gt;
+&lt;li&gt;git log --left-right master…experiment： 显示提交在哪个分支&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;git stash: 往堆栈中推送一个新的储藏。&lt;/li&gt;
+&lt;li&gt;git stash list: 列出暂存的东西&lt;/li&gt;
+&lt;li&gt;git stash apply: 应用刚存的东西&lt;/li&gt;
+&lt;li&gt;git statsh apply stash@2: 应用第2个储藏&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;apply只尝试应用储藏的工作，并不删除储藏的内容。如果应用完之后删除，则可以运行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git stash pop
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;git stash branch mybranch: 创建一个新的分支，检出你储藏的工作提交，重新应用你的工作。如果成功，将会丢弃储藏。&lt;/li&gt;
+&lt;li&gt;git commit --amend 改写最近一次提交&lt;/li&gt;
+&lt;li&gt;git reset HEAD^: 重置提交&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;从所有提交中删除一个文件,&lt;code&gt;慎重使用&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git filter-branch --tree-filter 'rm -f *~' HEAD
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt; --tree-filter: 每次检出项目时，先执行指定的命令，然后重新提交结果。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;git blame -L 12,22 mytest.py: 查看每一行代码的最后提交者及日期，-L 指定行数。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;bisect会在你的提交历史中二分查找快速定位错误代码引入时间。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git bisect start        # 设定查找开始
+git bisect bad          # 设定当前位置为bad
+git bisect good v1.0    # 设定好代码的位置
+[*******]               # 到底good和bad提交的中间位置
+# 重新运行代码，查看是对是错, 并标记good/bad
+git bisect good
+[*******]               # 到达下一个二分查找位置
+…
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;7. 自定义Git&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;git config --global core.editor emacs 配置默认编辑器&lt;/li&gt;
+&lt;li&gt;git config --global color.ui true  git中的着色&lt;/li&gt;
+&lt;li&gt;外部合并工具：P4Merge&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;格式化和空白符&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; git config --global core.autocrlf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;8.git 与其他系统&lt;/h3&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;9.Git内部原理&lt;/h3&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0&quot;&gt;Progit笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on November 18, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Stanfordcorenlp Java代码 学习笔记]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java代码-学习笔记</id>
+  <published>2013-10-28T00:00:00+08:00</published>
+  <updated>2013-10-28T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;h2&gt;stanford-corenlp-3.2.0b.jar&lt;/h2&gt;
+
+&lt;h3&gt;1. edu.stanford.nlp.pipline&lt;/h3&gt;
+
+&lt;h4&gt;1.1 StanfordCoreNLP.class&lt;/h4&gt;
+
+&lt;p&gt;这是一个管道，输入：字符串，输出：分析好的语言学的形式。&lt;/p&gt;
+
+&lt;p&gt;类被设计成可以应用多个标注器（Annocators）。&lt;/p&gt;
+
+&lt;p&gt;首先增加一个标注器来构造管道，然后输入你想标注的东西，得到已经标注好的形式。&lt;/p&gt;
+
+&lt;p&gt;比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit -file document.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;API的主要入口是StanfordCoreNLP.process()。&lt;/p&gt;
+
+&lt;h4&gt;1.2 Annotation.class&lt;/h4&gt;
+
+&lt;p&gt;super:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;在Java中，有时还会遇到子类中的成员变量或方法与超类（有时也称父类）中的成员变量或方法同名，因为子类中的成员变量或方法名优先级高，所以子类中的同名成员变量和方法就隐藏了超类的成员变量或方法，但是我们如果想要使用超类中的这个成员变量或方法，此使就需要用到super，请看下面的类。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;final：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;根据程序上下文环境，Java关键字final有“这是无法改变的”或者“终态的”含义，它可以修饰非抽象类、非抽象类成员方法和变量。你可能出于两种理解而需要阻止改变：设计或效率。 
+final类不能被继承，没有子类，final类中的方法默认是final的。 
+final方法不能被子类的方法覆盖，但可以被继承。 
+final成员变量表示常量，只能被赋值一次，赋值后值不再改变。 
+final不能用于修饰构造方法。 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5&gt;注释&lt;/h5&gt;
+
+&lt;p&gt;  private static final long serialVersionUID = 1L;  &lt;code&gt;私有静态的常量&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;  public Annotation(Annotation map)     &lt;code&gt;构造函数&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;  public Annotation copy()  &lt;code&gt;覆盖copy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;  public Annotation(String text)  &lt;code&gt;构造函数&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;  public String toString()  &lt;code&gt;覆盖copy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;  public Annotation(List&lt;CoreMap&gt; sentences) &lt;code&gt;构造函数&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;2. edu.stanford.nlp.sentiment&lt;/h3&gt;
+
+&lt;h4&gt;2.1 CollapsUnaryTransformer.java&lt;/h4&gt;
+
+&lt;p&gt;转化器分解一元节点组成的链条，使得根节点位于最左边。因为SentimentModel不处理一元节点，因此该方法可以简化，来构造二叉树。返回新的树和新的标签。原始树不改变。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;代码？&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4&gt;2.2 Evaluate.java&lt;/h4&gt;
+
+&lt;h4&gt;2.3 ReadSentimentDataset.java&lt;/h4&gt;
+
+&lt;h3&gt;3. edu.stanford.nlp.rnn&lt;/h3&gt;
+
+&lt;h4&gt;3.1 RNNCoreAnnotations.java&lt;/h4&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Stanfordcorenlp Java代码 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Headfirstjava 学习笔记]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/HeadFirstJava-学习笔记</id>
+  <published>2013-10-28T00:00:00+08:00</published>
+  <updated>2013-10-28T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;h4&gt;1. 基本概念&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;java中integer和boolean两种类型不相容，因此不能写&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; int x = 1;
+ while (x) {}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;println会在最后插入换行，print不会.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;String [] lst = [&quot;a&quot;, &quot;b&quot;]; lst.length;&lt;/li&gt;
+&lt;li&gt;Math.random() 随机产生[0,1]之间的小数&lt;/li&gt;
+&lt;li&gt;int x = (int) 24.6;&lt;/li&gt;
+&lt;li&gt;+: 连接字符串&lt;/li&gt;
+&lt;li&gt;面向对象优点：有时不需要改动已经测试号的程序。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建对象需要两个类：一个是被操作的类（比如Dog, AlarmClock等），另一个是测试该类的类。测试用的类带有main()，在其中建立存取被测对象。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; class Dog{}
+ class DogTestDrive{}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;java主动管理内存&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;全局变量：任何变量只要加上public，static, final，基本上都会变成全局变量取用的常数。&lt;/li&gt;
+&lt;li&gt;数量庞大的个别文件，可以pkzip存档为Java Archive-.jar文件。在jar文件中可以引入一个简单的文件，manifest，里面定义jar中哪个文件带有应用程序的main()方法。&lt;/li&gt;
+&lt;li&gt;所有的java程序都定义在类中。&lt;/li&gt;
+&lt;li&gt;创建类时，同时创建独立的测试用的类。&lt;/li&gt;
+&lt;li&gt;Java很注重类型。必须声明所有变量的类型。&lt;/li&gt;
+&lt;li&gt;变量有两种：primitive主数据类型用来保存基本类型的值，包括整数，布尔，浮点数; 对象引用保存的是对象的引用（？？）&lt;/li&gt;
+&lt;li&gt;变量必须要有类型，必须要有名称。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;primitive主数据类型：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;布尔：boolean true/false
+char: 16 bits 
+整型：byte（8位二进制）short(16位) int(32位) long（64位）
+浮点：float(32位) double(64位)  
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;float f = 32.5f;除非加上&quot;f&quot;，否则小数都会被java当作double处理。&lt;/li&gt;
+&lt;li&gt;确保变量能存下保存的值。&lt;/li&gt;
+&lt;li&gt;命名规则：
+
+&lt;ul&gt;
+&lt;li&gt;名称必须以字母，下划线，$开头，不能以数字开头&lt;/li&gt;
+&lt;li&gt;除了第一个字符外，后面就可以用数字，反正不要用在第一个字符就行。&lt;/li&gt;
+&lt;li&gt;避开Java保留字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对primitive主数据类型的变量来说，变量值就是所代表的值。对&lt;code&gt;引用&lt;/code&gt;变量来说，变量值是取得特定对象的位表示法。&lt;/li&gt;
+&lt;li&gt;引用大小未知；对任意一个Java虚拟机来说，所有的引用大小都一样；不能对引用变量运算。&lt;/li&gt;
+&lt;li&gt;primitive主数据类型变量值是该值的字节所表示的；引用变量的值代表位于堆之对象的存取方法。引用变量如同遥控器。没有引用到任何对象的引用变量的值位null值。&lt;/li&gt;
+&lt;li&gt;数组一定是对象。&lt;/li&gt;
+&lt;li&gt;类描述的是对象知道什么与执行什么&lt;/li&gt;
+&lt;li&gt;方法运用形参，调用方传入实参&lt;/li&gt;
+&lt;li&gt;java是通过值传递的，通过拷贝传递&lt;/li&gt;
+&lt;li&gt;可以忽略方法的返回值&lt;/li&gt;
+&lt;li&gt;如何隐藏数据？使用公有，私有修饰符。将实例变量标记为私有，提供公有gettet,setter控制存取。&lt;/li&gt;
+&lt;li&gt;实例变量永远都有默认值:整数0，浮点0.0，布尔false，引用变量null&lt;/li&gt;
+&lt;li&gt;null表示没有操作对象的远程控制，是引用不是对象&lt;/li&gt;
+&lt;li&gt;实例变量声明在类内，而不是方法内。局部变量声明在方法中。局部变量在使用前必须初始化，没有默认值。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;equals和==的区别&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;当参数引用的对象与当前对象为同一对象时，“==“ 和 ”equals” 均为true。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果两个对象的类型一致，并且内容一致，则“equals”返回true,这些类有：
+java.io.file,java.util.Date,java.lang.string,包装类（Integer,Double等）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    Animal  animal1=new Dog();
+    Animal  animal2=new  Cat();
+    Animal animal3=animal1;
+    则animal1==animal2   (FALSE)
+    animal1.equals(animal2)  (false)
+    animal1==animal3   (true)
+    animal1.equals(animal3)   (true)
+
+    Integer int1=new Integer(1);
+    Integer int2=new Integer(1);
+    String str1=new String(&quot;hello&quot;);
+    String str2=new String(&quot;hello&quot;);
+    int1==int2   输出：false,因为不同对象
+    int1.equals(int2)   输出：TRUE
+    str1==str2   (false)
+    str1.equals(str2)   (true)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ArrayList.remove&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;remove(int index) 移除下标为index的元素，返回移除的元素。
+remove(object o) 移除元素o,返回true/false
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;伪码--测试码--真实码&lt;/li&gt;
+&lt;li&gt;伪代码记录要做什么，而不是怎么做&lt;/li&gt;
+&lt;li&gt;开始编写代码之前，先学出测试方法用的代码。&lt;/li&gt;
+&lt;li&gt;极限编程（XP）方法论&lt;/li&gt;
+&lt;li&gt;思考与编写测试代码有助于了解被测试程序应该要做哪些事情。&lt;/li&gt;
+&lt;li&gt;Integer.parseInt(&quot;3&quot;);只对string为数字是有用。&lt;/li&gt;
+&lt;li&gt;for(int cell: locationCells){}&lt;/li&gt;
+&lt;li&gt;x++; ++x;&lt;/li&gt;
+&lt;li&gt;int randomNum = (int)(Math.random()*8);&lt;/li&gt;
+&lt;li&gt;ArrayList：Java函数库的一个类，可变的。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ArrayList无法保存primitive主数据类型。&lt;/p&gt;
+
+&lt;p&gt;不能保存int, float, 等primitive等数据类型，不过可以使用Integer等。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;布尔表达式：且（&amp;amp;&amp;amp;）或(||)非（!）&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&amp;amp;,| 与&amp;amp;&amp;amp;, ||的区别？&amp;amp;和| 是可以用做逻辑运算也可以用做位运算。
+
+&lt;ul&gt;
+&lt;li&gt;运算数据类型支持不同：&amp;amp;&amp;amp;,||只支持布尔类型运算；&amp;amp;,|可以支持int, boolean,char三种类型。&lt;/li&gt;
+&lt;li&gt;逻辑运算不同：&amp;amp;&amp;amp;,||条件运算符;&amp;amp;，|无条件运算符。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;计算p1&amp;amp;&amp;amp;p2时,Java先计算p1,若p1为true再计算p2;若p1为false,则不再计算P2,因此&amp;amp;&amp;amp;又称为条件与运算符.而&amp;amp;的两个运算对象都要计算,所以,&amp;amp;又称为无条件与运算符.类似的还有 &quot;|| &quot; (条件或运算符,p1 || p2,Java先计算p1,若p1为FALSE再计算P2,若P1为TRUE,则不再计算P2)和 &quot;| &quot; (无条件运算符,两边对象都要计算) .&lt;/p&gt;
+
+&lt;p&gt;例如:(a &amp;lt;2)&amp;amp;(b-- &amp;lt;2) 保证(b-- &amp;lt;2)能被计算.这样,无论a是否小于2,变量b都要减1.&lt;/p&gt;
+
+&lt;p&gt;要避免使用&amp;amp;和|运算符,它们好处不大.使用&amp;amp;和|运算符会使程序可读性降低,并且可能导致错误,比如:(x!=0)&amp;amp;(100/x)当x为0时产生运行错误,而(x!=0)&amp;amp;&amp;amp;(100/x)没问题&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;java程序不会因为import而变大变慢&lt;/li&gt;
+&lt;li&gt;除了java.lang这个包里的类，要用到其他的类都要指定完整名称。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;7. 继承与多态&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;继承和包含的关系：is-a测试。&lt;/li&gt;
+&lt;li&gt;super 可指定使用父类的方法。&lt;/li&gt;
+&lt;li&gt;父类通过存取权限限制子类是否可继承某些特定成员。
+
+&lt;ul&gt;
+&lt;li&gt;private: 不可继承&lt;/li&gt;
+&lt;li&gt;default&lt;/li&gt;
+&lt;li&gt;protected&lt;/li&gt;
+&lt;li&gt;public : 可继承&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;滥用继承了吗，什么时候使用继承
+
+&lt;ul&gt;
+&lt;li&gt;当某个子类比父类更有特定意义时&lt;/li&gt;
+&lt;li&gt;当行为程序应该被多个相同基本类型所共享时&lt;/li&gt;
+&lt;li&gt;is-a测试通过&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;子类是extends父类出来的&lt;/li&gt;
+&lt;li&gt;子类会继承父类所有public类型的实例变量和方法，但不继承所有的private类型的变量方法&lt;/li&gt;
+&lt;li&gt;继承下来的方法可以被覆盖，但实例变量不能被覆盖，因为实例变量不能定义行为。&lt;/li&gt;
+&lt;li&gt;is-a测试是单向的，具有传递性。&lt;/li&gt;
+&lt;li&gt;java只是由一堆类组成的。&lt;/li&gt;
+&lt;li&gt;多态性：发送消息给某个对象，让该对象自行决定响应何种行为。
+
+&lt;ul&gt;
+&lt;li&gt;通过将子类对象引用赋值给超类对象引用变量来实现动态方法调用。&lt;/li&gt;
+&lt;li&gt;java 的这种机制遵循一个原则：当超类对象引用变量引用子类对象时，&lt;strong&gt;被引用对象的类型&lt;/strong&gt;而不是引用变量的类型决定了调用谁的成员方法，但是这个被调用的方法必须是在超类中定义过的，也就是说被子类覆盖的方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方法的重写&lt;strong&gt;Overriding&lt;/strong&gt;和重载&lt;strong&gt;Overloading&lt;/strong&gt;是Java多态性的不同表现。重写Overriding是父类与子类之间多态性的一种表现，重载Overloading是一个类中多态性的一种表现。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写(Overriding)。子类的对象使用这个方法时，将调用子类中的定义，对它而言，父类中的定义如同被“屏蔽”了。如果在一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型，则称为方法的重载(Overloading)。Overloaded的方法是可以改变返回值的类型。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实际上这里涉及方法调用的优先问题 ，优先级由高到低依次为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;this.show(o) &amp;gt; super.show(o) &amp;gt;
+this.show((super)o) &amp;gt; super.show((super)o)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;子类层次限制：一般不超过一，两层。也有例外，特别是GUI类这边。&lt;/li&gt;
+&lt;li&gt;没有私有类概念，不过有办法防止某个类被作出子类：
+
+&lt;ul&gt;
+&lt;li&gt;存取控制：类不标注为公有。非公有类智能被同一个包的类作出子类。&lt;/li&gt;
+&lt;li&gt;final修饰符：表示为继承树的末端，不能被继承。&lt;/li&gt;
+&lt;li&gt;让类只拥有private的构造程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;防止特定方法被覆盖，将该方法标注为final。将整个类标注为final，表示没有任何方法被覆盖。&lt;/li&gt;
+&lt;li&gt;方法是合约的标志。&lt;/li&gt;
+&lt;li&gt;覆盖的方法参数必须一样，且返回类型必须兼容。&lt;/li&gt;
+&lt;li&gt;子类覆盖父类方法，覆盖规则：
+
+&lt;ul&gt;
+&lt;li&gt;参数必须一样，且返回类型要兼容。参数不一样则不是覆盖，是overload&lt;/li&gt;
+&lt;li&gt;不能降低方法的存取权限。父类是public，子类不能是private。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重载(overload)的意义是两个方法，名称相同，参数不同。&lt;strong&gt;重载和继承，多态毫无关系&lt;/strong&gt;。重载方法和覆盖方法不一样。
+
+&lt;ul&gt;
+&lt;li&gt;重载返回类型可以不同。&lt;/li&gt;
+&lt;li&gt;不能只是返回类型不同而参数相同。&lt;/li&gt;
+&lt;li&gt;可以修改存取权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;8.接口与抽象类&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;abstract: 通过标记类位abstract，则不管在哪里，这个类就不能创建任何类型的实例。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; abstract class Canine extends Animal{
+     public void roam() {}
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;抽象类除了被继承过之外，没有用途，没有值，没有目的。&lt;/li&gt;
+&lt;li&gt;抽象类表示此类必须被extend过，抽象的方法表示该方法一定被覆盖过override&lt;/li&gt;
+&lt;li&gt;抽象的方法没有实体&lt;/li&gt;
+&lt;li&gt;如果声明了一个抽象的方法，必须将类标记为抽象类。不能在非抽象类中拥有抽象方法。&lt;/li&gt;
+&lt;li&gt;抽象方法的意义：
+
+&lt;ul&gt;
+&lt;li&gt;就算无法实现出方法的内容，还是可以定义出一组子型共同的协议。&lt;/li&gt;
+&lt;li&gt;支持多态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;抽象方法没有内容，只是为了标记出多态存在。&lt;/li&gt;
+&lt;li&gt;必须实现所有的抽象的方法。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;9.构造器与垃圾收集器&lt;/h4&gt;
+
+&lt;h4&gt;10.数字局静态&lt;/h4&gt;
+
+&lt;h4&gt;11.异常处理&lt;/h4&gt;
+
+&lt;h4&gt;12.图形用户接口&lt;/h4&gt;
+
+&lt;h4&gt;13.Swing&lt;/h4&gt;
+
+&lt;h4&gt;14.序列化和文件的输入输出&lt;/h4&gt;
+
+&lt;h4&gt;15.网络与线程&lt;/h4&gt;
+
+&lt;h4&gt;16.集合与泛型&lt;/h4&gt;
+
+&lt;h4&gt;17.包，jar存档文件和部署&lt;/h4&gt;
+
+&lt;h4&gt;18.远程部署RMI&lt;/h4&gt;
+
+&lt;h3&gt;书籍推荐&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;《Head First 设计模式》&lt;/li&gt;
+&lt;li&gt;《极限编程》&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Headfirstjava 学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 28, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Dl For Nlp]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/DL-for-NLP</link>
+  <id>/%E7%AC%94%E8%AE%B0/DL-for-NLP</id>
+  <published>2013-10-18T00:00:00+08:00</published>
+  <updated>2013-10-18T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;h2&gt;Deep Learning for NLP(without Magic)笔记&lt;/h2&gt;
+
+&lt;h3&gt;0.背景简介&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;目前机器学习基于人工设计的特征，机器学习只是优化参数权重已达到好的预测效果。&lt;/p&gt;
+
+&lt;p&gt;表示学习：尝试自动学习好的特征来表示数据&lt;/p&gt;
+
+&lt;p&gt;深度学习：尝试学习多层的表示，以增加复杂度和抽象度。&lt;/p&gt;
+
+&lt;p&gt;研究深度学习的五个原因：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;表示性学习：手工设计特征复杂耗时&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;distributed representation的必要性：NLP中原子表示法的脆弱性。&lt;/p&gt;
+
+&lt;p&gt;基于聚类的Distribional similarity效果很好：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;语法分析 &lt;strong&gt;Brown clustering&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实体识别 &lt;strong&gt;Standford NER, exchange clustering&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Distributed representations可处理维数灾难。&lt;/p&gt;
+
+&lt;p&gt;解决方案：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;手工设计特征&lt;/li&gt;
+&lt;li&gt;假设光滑目标函数&lt;/li&gt;
+&lt;li&gt;核函数方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;非监督的特征和权重学习
+现在，多数NLP/ML方法需要标记好的训练数据，不过大部分数据都是未标注的。因此需要非监督的学习。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学习多层表示
+我们需要有用的中间层表示。We need composi&gt;onality in our ML models.
+循环/递归：相同的算子应用在不同的部分上。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为什么现在？
+ 2006年之前，deep architectures没有成功。
+ 改变：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;提出了关于非监督的预训练方法 &lt;strong&gt;RBM, autoencoders, contrastive estimation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;更有效的参数估计方法&lt;/li&gt;
+&lt;li&gt;更好的理解模型正则化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;strong&gt;DL取得很好的效果&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Neural Language Model&lt;/li&gt;
+&lt;li&gt;SENNA POS（词性分析） NER（实体识别）&lt;/li&gt;
+&lt;li&gt;多核CPU和GPU使得计算速度大幅提升&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;1.基础知识&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h4&gt;1.1 Motivations&lt;/h4&gt;
+
+&lt;h4&gt;1.2 从逻辑回归到神经网络&lt;/h4&gt;
+
+&lt;h5&gt;单神经元&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;n个输入&lt;/li&gt;
+&lt;li&gt;1个输出&lt;/li&gt;
+&lt;li&gt;偏置单元&lt;/li&gt;
+&lt;li&gt;激活函数&lt;/li&gt;
+&lt;li&gt;参数W,b&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h5&gt;从Maxent分类器到神经网络&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h5&gt;单个神经元计算：&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;h_wb(x) = f(wx+b)
+f(z) = 1/(1+e^(-z))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5&gt;神经网络=同时运行多个逻辑回归&lt;/h5&gt;
+
+&lt;p&gt;训练W:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;对有监督的单层神经网络，我们可以和训练最大熵模型一样，通过梯度来训练。
+
+&lt;ul&gt;
+&lt;li&gt;SGD&lt;/li&gt;
+&lt;li&gt;对偶梯度(Conjugate gradient 或 L-BFGS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;blockquote&gt;&lt;pre&gt;&lt;code&gt;  问题1：对偶梯度(Conjugate gradient 或 L-BFGS
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;多层网络较复杂，因为中间隐层逻辑单元使得方程非凸，就像hidden CRFS。不过我们可以应用相同的思路和方法，后向传播算法。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;为什么需要非线性：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;对逻辑回归来说，映射到概率。&lt;/li&gt;
+&lt;li&gt;函数逼近，比如回归，分类。
+
+&lt;ul&gt;
+&lt;li&gt;如果没有非线性，深层神经网络并不能比线性变换做更多的事情。因为多层线性总可以转换为复杂的单层线性变换。&lt;/li&gt;
+&lt;li&gt;除了在Boltzmann机/图模型下，概率理解并不是必须的。人们经常用其他非线性变换，比如tanh。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;基本概念总结：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;神经元 = 逻辑回归或相似函数&lt;/li&gt;
+&lt;li&gt;输入层 = 输入 训练/测试 向量&lt;/li&gt;
+&lt;li&gt;偏置单元 = 截距项&lt;/li&gt;
+&lt;li&gt;激活 = 反应&lt;/li&gt;
+&lt;li&gt;激活函数 是 logistic函数，或其他sigmoid非线性函数&lt;/li&gt;
+&lt;li&gt;后向传播 =  应用在多层网络上的随机梯度下降&lt;/li&gt;
+&lt;li&gt;权重衰退 = 正则化/Bayesian先验&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;非监督预训练使得有效的深度学习变为可能&lt;/p&gt;
+
+&lt;h4&gt;1.3 词表示(Wordrepresentations)&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;The standard word representation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;向量空间模型中，向量由一个1和很多0组成：&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;[0, 0, …, 0, 1, 0, …, 0]&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;维数：20k(Speech)-50k(PTB)-500k(big vocab)-13M(Google 1T)&lt;/p&gt;
+
+&lt;p&gt;称作“one-hot”representation。&lt;/p&gt;
+
+&lt;p&gt;存在的问题：每个词被孤立起来，比如motel和hotel相似度为0.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Distributional similarity based representations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Class-based (hard) and soft clustering word representations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brown clustering (Brown et al. 1992)&lt;em&gt;  Exchange clustering (Clark 2003)&lt;/em&gt;  Desparsification and great example of unsupervised pre-training&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;软分类模型学习了在每一类中都有一个单词分布:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LSA&lt;/li&gt;
+&lt;li&gt;LDA, HMM&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Neural word embeddings as a distributed representation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;(Bengio et al. 2003, Collobert &amp;amp; Weston 2008, Turian et al. 2010)&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;单词被表示为一个紧致的向量。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages of the neural word embedding approach&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;neural word embeddings通过增加有监督过程更有意义。&lt;/p&gt;
+
+&lt;h4&gt;1.4 非监督词向量的学习&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;A neural network for learning word vectors (Collobert et al. JMLR 2011)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;思路：一个单词和文本作为正样本；一个随机的单词在相同的文本中作为负样本。&lt;/p&gt;
+
+&lt;p&gt;实现：&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;score(cat chills on a mat) &gt; score(cat chills Jeju a mat)&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;怎样计算得分：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;应用神经网络&lt;/li&gt;
+&lt;li&gt;每个词表示为n维向量&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Word embedding matrix&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;随机初始化所有的词向量，组成word embedding matrix L: n*|V|&lt;/p&gt;
+
+&lt;p&gt;从L中得到每个单词的向量：x = Le, 其中e为one-hot向量，表示单词表|V|中第i个单词。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;计算得分&lt;/strong&gt;
+score(cat chills in a mat):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;表示短语：从L中得到每个单词的表示，cat: n*1, chills: n*1, …&lt;/li&gt;
+&lt;li&gt;连接所有单词，组成5*n的向量x: 5n*1&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;3层神经网络：&lt;/p&gt;
+
+&lt;p&gt;s = score(cat chills on a mat)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;s = U^T*f(Wx+b), x:20,1 W:8,20 U:8,1
+s = U^T*a 
+a = f(z)
+z = Wx+b
+x = [x_cat x_chills x_on x_a x_mat]
+L: n*|V|  这里n=4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;s_c = score(cat chills Jeju a mat)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;目标函数&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最大化s,最小化s_c，即最小化下式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;J = max(0, 1 - s + s_c)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;&lt;code&gt;  很奇怪，为什么要定义上式，而不是max(s - s_c)
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;它是连续的，因此可以应用SGD。&lt;/p&gt;
+
+&lt;p&gt;假设损失J&gt;0，我们可以计算s, s_c关于变量:U, W, b, x的偏导数&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;∂s/∂U = ∂(U^T*a)/∂U
+∂s/∂U = a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;应用后向传播训练&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;∂s/∂W = ∂(U^T*a)/∂W = ∂/∂W(U^T*f(z)) = ∂/∂W(U^T*f(Wx+b))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;W_ij只出现在a_i中，例如：W_23只用来计算a_2&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;∂/∂W_ij(U^T*a) = ∂/∂W_ij(U_i*a_i)
+∂/∂W_ij(U_i*a_i) = U_i * ∂a_i/∂W_ij
+                 = U_i * ∂a_i/∂z_i * ∂z_i/W_ij
+                 = U_i * f'(z_i) * ∂z_i/W_ij
+                 = U_i * f'(z_i) * ∂/W_ij(W_i*x+b_i)
+                 = U_i * f'(z_i) * ∂/W_ij(∑W_ik*x_k)
+                 = U_i * f'(z_i) * x_j
+                 = delta_i * x_j
+delta_i = U_i * f'(z_i) 称作‘局部误差信号’
+x_j 称作‘局部输入信号’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;从W_ij 到W:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;∂J/∂W = delta * x^T
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;对偏置单元b:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;∂/∂b_i(U_i*a_i) = U_i * ∂a_i/∂b_i 
+                = U_i * f'(z_i) * ∂(W_i*x+b_i)/∂b_i
+                = delta_i
+
+∂s/∂x_j = … = delta^T * W_.j
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;1.5 后向传播训练&lt;/h4&gt;
+
+&lt;p&gt;简单的链式法则：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;z = f(y); y = g(x); ∂z/∂x = ∂z/∂y * ∂y/∂x
+∆z = ∂z/∂y * ∆y; ∆y = ∂y/∂x * ∆x; ∆z = ∂z/∂y * ∂y/∂x * ∆x
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;多路径链式法则：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;z = f(y_1, y_2, …, y_n)
+∂z/∂x = ∑∂z/∂y_i * ∂y_i/∂x
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Chain Rule in Flow Graph:&lt;/p&gt;
+
+&lt;p&gt;Flow Graph: 任意有向非循环图&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;前向传播&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;后向传播&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;1.6 学习词级别的分类器：POS（词性标注）, NER(实体识别)&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;模型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(Collobert &amp;amp; Weston 2008; Collobert et al. 2011)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;类似词向量学习过程，把单个得分替换为Softmax/Maxent 分类器&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类似于词向量模型中，通过后向传播训练。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;1.7 Sharing statistical strength&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Auto-encoders&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;多层神经网络，目标：output = input&lt;/p&gt;
+
+&lt;p&gt;重构 = decoder(encoder(input))&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = tanh(Wx + b)
+x' = tanh(W^T*x + b)
+cost = ||x' - x||^2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;目标： 使得重构误差最小&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PCA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;PCA = Linear Manifold = Linear Auto-Encoder&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;自编码学习凸变量，就像非线性的PCA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Auto-Encoder Variants&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;离散输入：交叉熵或log-likelihood重构标准&lt;/p&gt;
+
+&lt;p&gt;Preventing them to learn the identity everywhere:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Undercomplete(eg PCA): boCleneck code smaller than input&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sparsity: penalize hidden unit ac&gt;va&gt;ons so at or near 0&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Denoising: predict true input from corrupted input&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Contractive: force encoder to have small deriva&gt;ves&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Stacking Auto-Encoders&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;将多个自编码器堆积在一起，组成更复杂的非线性表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;逐层非监督训练&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;2.Recursive Neural Networks(递归神经网络)&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;怎样将短语映射到向量空间中？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;句子的含义由以下决定：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;每个词的含义&lt;/li&gt;
+&lt;li&gt;词之间的组织形式&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;递归神经网络可以同时学习组合式向量表示和语法树。&lt;/p&gt;
+
+&lt;h4&gt;2.1 Motivation&lt;/h4&gt;
+
+&lt;h4&gt;2.2 Recursive Neural Networks for Parsing语法树：&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;符号 &lt;/th&gt;
+&lt;th&gt; 含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;S   &lt;/td&gt;
+&lt;td&gt;句子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NP  &lt;/td&gt;
+&lt;td&gt;名词短语&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VP  &lt;/td&gt;
+&lt;td&gt;动词短语&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PP  &lt;/td&gt;
+&lt;td&gt;介词短语&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CP  &lt;/td&gt;
+&lt;td&gt;动补词组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PP  &lt;/td&gt;
+&lt;td&gt;介词短语&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PP  &lt;/td&gt;
+&lt;td&gt;介词短语&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;规则    &lt;/th&gt;
+&lt;th&gt; 含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;S→NP VP &lt;/td&gt;
+&lt;td&gt;表示“句子”由“名词短语 动词短语”组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NP→Det N &lt;/td&gt;
+&lt;td&gt;表示“名词短语”由“冠词 名词”组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VP→VP PP &lt;/td&gt;
+&lt;td&gt;表示“动词短语”由“动词短语 介词短语”组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VP→V NP&lt;/td&gt;
+&lt;td&gt;表示“动词短语”由“动词 名词短语”组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PP→Prep NP&lt;/td&gt;
+&lt;td&gt; 表示“介词短语”由“介词 名词短语”组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Det→the/a &lt;/td&gt;
+&lt;td&gt; 表示“冠词”由the 或 a 组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;N→girl/letter/pencil &lt;/td&gt;
+&lt;td&gt; 表示“名词”由girl/letter/pencil&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;V→write &lt;/td&gt;
+&lt;td&gt;表示“动词”由write组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prep→with&lt;/td&gt;
+&lt;td&gt;表示“介词”由with组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;&lt;strong&gt;递归神经网络用语结构化预测&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;输入：两个候选表示&lt;/li&gt;
+&lt;li&gt;输出：父节点表示p；父节点的可信度score=U&lt;sup&gt;T&lt;/sup&gt;*p&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;应用RNN分解句子：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    x = (x1, …, xn)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;分别计算score(x1, x2), …, score(x_n-1, x_n)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;取分数最大者合并，比如 （x1, x_2）--&gt; x_1'&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; x = (x_1', x3, …, x_n)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重复上述两个步骤，直至合并完成。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Max-Margin Framework-Details&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4&gt;2.3 Theory: Backpropagation Through Structure&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Backpropagation Through Structure BTS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scene Parsing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;原理：组合性&lt;/p&gt;
+
+&lt;p&gt;算法：Same Recursive Neural Network as for natural language parsing! (Socher et al. ICML 2011)&lt;/p&gt;
+
+&lt;p&gt;多类别切分&lt;/p&gt;
+
+&lt;h4&gt;2.4 Recursive Autoencoders(RAE)&lt;strong&gt;递归自编码器:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;取代有监督的打分，我们在每个节点上计算重构误差：
+    E_rec([c1;c2]) = 1/2||[c1;c2] - [c1';c2']||^2
+&lt;strong&gt;半监督递归自编码器:&lt;/strong&gt;&lt;em&gt; 为了得到情感分析和反义词问题，增加softmax分类器&lt;/em&gt; 误差：重构误差和cross-entropy的加权平均&lt;strong&gt;情感检测:&lt;/strong&gt;* 多数方法基于&lt;code&gt;词袋模型&lt;/code&gt;+&lt;code&gt;语言学特征/处理/词典&lt;/code&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;上述方法不能分辨出：    * 正面(+) white blood cells destroying an infection
+
+&lt;ul&gt;
+&lt;li&gt;负面(-) an infection destroying white blood cells
+
+&lt;h4&gt;2.5 应用到情感分析和Paraphrase Detection&lt;/h4&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;怎样比较两句话的含义？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Unsupervised Unfolding RAE and a pair-wise sentence comparison of nodes in parsed trees， Socher et al. (NIPS 2011)&lt;/p&gt;
+
+&lt;h4&gt;2.6 Compositionality Through Recursive Matrix-VectorSpaces&lt;/h4&gt;
+
+&lt;p&gt;Recursive Matrix-Vector Model：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;p = tanh(W[c1 c2]^T + b)
+==&amp;gt;
+p = tanh(W[C2c1 C1c2]^T + b)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;2.7 Relation classification&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;MV-RNN (Matrix Vector RNN)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;www.socher.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;3.应用，讨论，相关资料&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;已存在的NLP应用:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语言模型
+
+&lt;ul&gt;
+&lt;li&gt;语音识别&lt;/li&gt;
+&lt;li&gt;机器翻译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;词性标注（Part-of-Speech Tagging）&lt;/li&gt;
+&lt;li&gt;chunking ??&lt;/li&gt;
+&lt;li&gt;实体识别(Named Entity Recognition)&lt;/li&gt;
+&lt;li&gt;语义角色标注(Semantic Role Labeling)&lt;/li&gt;
+&lt;li&gt;情感分析(Sentiment Analysis)&lt;/li&gt;
+&lt;li&gt;Paraphrasing ??&lt;/li&gt;
+&lt;li&gt;问答系统(Question-Answering)&lt;/li&gt;
+&lt;li&gt;语义消歧(Word-Sense Disambiguation)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;3.1 应用&lt;/h4&gt;
+
+&lt;h5&gt;3.1.1 自然语言模型&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;预测P(next word|previous word)&lt;/li&gt;
+&lt;li&gt;计算长句子的概率&lt;/li&gt;
+&lt;li&gt;应用到语音，翻译，压缩&lt;/li&gt;
+&lt;li&gt;计算瓶颈：大词表V意味着计算输出：#隐含层*|V|&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Neural Language Model:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Bengio “A Neural Probabilistic Language Model”
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;每个词表示为连续值的分布&lt;/li&gt;
+&lt;li&gt;Generalizes to sequences of words that are semantically similar to training sequences&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Recurrent Neural Net Language Modeling for ASR&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Mikolov et al 2011
+http://www.fit.vutbr.cz/~imikolov/rnnlm 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Neural Net Language Modeling for ASR&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Schwenk 2007
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;应用到统计机器翻译&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://lium.univ-lemans.fr/cslm/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5&gt;3.1.2 Structured embedding of knowledge bases&lt;/h5&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Learning Structured Embeddings of Knowledge Bases, (Bordes,Weston, Collobert &amp;amp; Bengio, AAAI 2011）&lt;/li&gt;
+&lt;li&gt;Joint Learning of Words and Meaning Representations for OpenaText Semantic Parsing, (Bordes,Glorot,Weston &amp;amp; Bengio, AISTATS 2012)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h5&gt;3.1.3 Assorted Speech and NLP Applications&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Learning Multiple Word Vectors&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;neural word vector&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;可视化&lt;/strong&gt;学习的词向量(Huang et al.(ACL2012))&lt;/p&gt;
+
+&lt;p&gt;非监督的预训练（比如DBN, RBM堆积起来），有监督的微调。&lt;/p&gt;
+
+&lt;h4&gt;3.2 相关资料(readings, code)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2013-10-18-tutorial.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2013-10-18-software.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;3.3 Deep Learning Tricks&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;“Practical Recommendations for Gradient-Based Training of Deep Architectures” Y. Bengio (2012),&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;非监督预训练&lt;/li&gt;
+&lt;li&gt;SGD,设置学习速率&lt;/li&gt;
+&lt;li&gt;主要的超参数
+
+&lt;ul&gt;
+&lt;li&gt;Learning rate schedule &amp;amp; Early stopping&lt;/li&gt;
+&lt;li&gt;Minibatches&lt;/li&gt;
+&lt;li&gt;参数初始化&lt;/li&gt;
+&lt;li&gt;隐含层的个数&lt;/li&gt;
+&lt;li&gt;L1,L2权重衰退&lt;/li&gt;
+&lt;li&gt;Sparsity regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debugging --&gt; &quot;Finite difference gradient check (Yay)&lt;/li&gt;
+&lt;li&gt;怎样有效的设置超参数&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;非线性函数&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2013-10-18-log-tanh.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tanh 是最常用的，在深度网络中表现最好！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2013-10-18-other-non-linear.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SGD&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;梯度下降一次迭代应用所有的样本&lt;/li&gt;
+&lt;li&gt;随机梯度下降一次迭代只应用一个样本&lt;/li&gt;
+&lt;li&gt;传统的梯度下降是batch方法，一次迭代过程非常慢，&lt;code&gt;一般不用&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use 2&lt;sup&gt;nd&lt;/sup&gt; order batch method such as &lt;code&gt;LBFGS&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;对大数据集，SGD方法优于所有的batch方法；对小数据集，&lt;code&gt;LBFGS&lt;/code&gt;或&lt;code&gt;Conjugat Gradients&lt;/code&gt;优于&lt;code&gt;Large-batch LBFGS&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Learning Rates&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;简单原则：固定为常数，对所有参数应用相同值&lt;/li&gt;
+&lt;li&gt;Collobert scales them by the inverse of square root of the fan-in of each neuron&lt;/li&gt;
+&lt;li&gt;Better results can generally be obtained by allowing learning  rates to decrease, typically in O(1/t) because of theoretical  convergence guarantees, e.g.,&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;/2013-10-18-rate.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Long-term dependencies and clipping trick&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在深度网络中，比如RNN，梯度为一组Jacobian矩阵的乘积。它很容易变得过大或过小，使得梯度下降的局部假设失效。&lt;/li&gt;
+&lt;li&gt;解决方案是：clip gradients to a maximum value --by Mikolov&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;参数初始化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;初始化隐含层偏置项为0，输出偏置项为最优值，如果权重0.&lt;/li&gt;
+&lt;li&gt;初始值~Uniform(-r, r)&lt;/li&gt;
+&lt;li&gt;r = sqrt(6/(fan-in + fan-out)) for tanh units; 4 * bigger for sigmoid units&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;注：对for embedding weights, fan-in=1 and we don’t care about fan-out, Collobert uses Uniform(-1,1).&lt;/p&gt;
+
+&lt;h4&gt;3.4 讨论：局限性，优势，未来研究方向&lt;/h4&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/DL-for-NLP&quot;&gt;Dl For Nlp&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 18, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[情感分析 基础理论]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA</link>
+  <id>/%E7%AC%94%E8%AE%B0/情感分析-基础理论</id>
+  <published>2013-10-17T00:00:00+08:00</published>
+  <updated>2013-10-17T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ad目前工作&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;情感语料词典  nlp/arc_nlp/sentiment/mmseg_data/nmap.py&lt;/li&gt;
+&lt;li&gt;关联规则训练数据 dmp1: mongo conn.weibo_db.dependence表&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;一.基本理论&lt;/h2&gt;
+
+&lt;h3&gt;定义&lt;/h3&gt;
+
+&lt;p&gt;情感分析又称评论挖掘，意见挖掘，是一种对网上各种资源评论及其它内容进行提取、分析、处理、归纳、推理的技术。&lt;/p&gt;
+
+&lt;h3&gt;划分&lt;/h3&gt;
+
+&lt;h4&gt;按处理文本粒度&lt;/h4&gt;
+
+&lt;h5&gt;词语级&lt;/h5&gt;
+
+&lt;p&gt;Word-level Sentiment Analysis,WSA&lt;/p&gt;
+
+&lt;p&gt;构建情感词典，识别候选词，判断候选词情感极性与强度。&lt;/p&gt;
+
+&lt;p&gt;情感词典构建：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;人工收集种子情感词&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;采用机器学习方法扩充种子情感词构建情感词典。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;在识别候选词时,采用统计与规则相结合方法实现,例如利用词汇共现关系识别候选词,并且根据连词规则进一步精确识别候选词。在识别候选词的基础上,采用无监督、有 监督和半监督方式判定极性和强度。&lt;/p&gt;
+
+&lt;h5&gt;句子级&lt;/h5&gt;
+
+&lt;p&gt;Sentence-level Sentiment Analysis,SSA&lt;/p&gt;
+
+&lt;p&gt;识别情感词、分析句子结构以及判别情感极性和强度。&lt;/p&gt;
+
+&lt;p&gt;基于无监督的句级情感分析根据句子中情感词的极性和强度累加值确定情感极性与强度。基于有监督的情感句分类是主流模型：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;SVM&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;最大熵(Maximum Entropy,ME)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;条件随机场(CRFs)等&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h5&gt;篇章级&lt;/h5&gt;
+
+&lt;p&gt;Document-level Sentiment Analysis,DSA&lt;/p&gt;
+
+&lt;p&gt;指识别篇章对某一事物的情感极性和强度。&lt;/p&gt;
+
+&lt;p&gt;其相关过程包括:情感句分析、篇章级情感特征提取以及构建篇章级情感分类器。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;基于无监督的篇章级情感分析模型主要根据情感词典识别情感词,然后通过累加情感词的情感极性和强度判别篇章情感极性和强度;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于有监督的篇章情感分析主要通过提取情感特征,进而构建情感分类器 来预测篇章情感极性。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;按处理文本类型&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;基于舆情的情感分析&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于商品评论的情感分析&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;组成&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;主题&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;观点&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;意见持有者&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;情感&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;任务&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;主题抽取&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;意见持有者识别&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;陈述选择&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;情感分析&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;观点模型&lt;/h3&gt;
+
+&lt;h4&gt;直接观点&lt;/h4&gt;
+
+&lt;p&gt;五元组(o_j, f_jk, oo_ijkl, h_i, t_l):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;o_j: 观点j&lt;/li&gt;
+&lt;li&gt;f_jk: 观点j的第k个特征&lt;/li&gt;
+&lt;li&gt;h_i:观点持有者&lt;/li&gt;
+&lt;li&gt;oo_ijkl: 观点持有者h_i对特征f_jk在时间t_l时的观点倾向，可以是积极、消极、中立&lt;/li&gt;
+&lt;li&gt;t_l:观点持有者h_i对特征f_jk发表看法的时间&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;相对观点&lt;/h4&gt;
+
+&lt;p&gt;没有直接评价一个对象的好坏，而是借助一个或对个对象作为参照&lt;/p&gt;
+
+&lt;h3&gt;基本框架&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;从网络中获取原数据&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;主客观信息分类，目前技术来说，主客观识别比情感分析更难。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对主观文本进行语言层面、技术层面、情感倾向性分析，得到情感分析结果&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;应用：市场预测、大众评论、信息预测&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;二.情感分析的研究&lt;/h2&gt;
+
+&lt;h3&gt;信息抽取&lt;/h3&gt;
+
+&lt;h4&gt;主题抽取&lt;/h4&gt;
+
+&lt;h5&gt;显式主题&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;根据短语组成和位置特点，采用相似性测试方法确定主题&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;根据主题和一些指标词共现特征来识别常现和非常现的主题术语，互信息PMI&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;根据术语词典确定主题词汇&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h5&gt;隐式主题&lt;/h5&gt;
+
+&lt;h4&gt;陈述的选择&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;BoosTexter 分类器&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于规则的陈述识别方法&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;情感词抽取及极性判断&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;基于语料库的方法&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于词典的方法&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;观点持有者抽取&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CRF&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;情感倾向性分析&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;词汇短语层&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;句子层&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;层叠CRFs模型&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;文本层&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;三.应用&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;市场分析决策&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;大众评论研究&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;四.存在问题&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;缺少语料及平台&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;无论监督学习还是非监督学习，大部分研究者仅局限在观点词、短语、语法信息判断观点词的极性，而忽略了语境。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;主观性文本较随意性口语化。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;动词对情感词的影响&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA&quot;&gt;情感分析 基础理论&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 17, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Deeplearning学习笔记]]></title>
+  <link>/%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</link>
+  <id>/%E7%AC%94%E8%AE%B0/DeepLearning学习笔记</id>
+  <published>2013-10-10T00:00:00+08:00</published>
+  <updated>2013-10-10T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;h2&gt;词向量&lt;/h2&gt;
+
+&lt;p&gt;参考文章:
+1. &lt;a href=&quot;http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf&quot;&gt;《A Neural Probabilistic Language Model》&lt;/a&gt;Bengio大作.2003
+2. &lt;a href=&quot;http://ronan.collobert.com/pub/matos/2011_nlp_jmlr.pdf&quot;&gt;《Natural Language Processing (Almost) from Scratch》&lt;/a&gt;RonanCollobert 和 Jason Weston.2011。他们还把论文所写的系统开源了，叫做SENNA，3500 多行纯 C 代码也是写得非常清晰。
+3. 《Three new graphical models for statistical language modelling》Hinton.2006
+4. 《A scalable hierarchical distributed language model》Hinton.2008
+5. 《Statistical Language Models based on Neural Networks》&lt;a href=&quot;http://www.fit.vutbr.cz/~imikolov/rnnlm/&quot;&gt;http://www.fit.vutbr.cz/~imikolov/rnnlm/&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&quot;&gt;Deeplearning学习笔记&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on October 10, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[第一篇博客]]></title>
+  <link>/%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2</link>
+  <id>/%E6%9D%82%E8%AE%B0/第一篇博客</id>
+  <published>2013-09-27T00:00:00+08:00</published>
+  <updated>2013-09-27T00:00:00+08:00</updated>
+  <author>
+    <name>Ni Peng</name>
+    <uri></uri>
+    <email>nipengmath@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
+
+&lt;p&gt;今天终于有了属于自己开发的一个博客网站。
+现在时间是凌晨1:20。
+好久没有这么专注的做一件事。
+不是之前没有用心，而是有成就感。
+自己数学出身，代码工程化是弱项。
+在计算机互联网领域，一个基础学科出身的人实在想不出有什么强项。
+自己的强项就是推导公式，而不是写代码。
+所有工作时很少有强烈的成就感，当然也是有的，只不过大多数时间被鄙视，而
+不是鄙视别人，囧。。。。&lt;/p&gt;
+
+&lt;p&gt;这个网站是一个开始。
+不仅是学习技术维护网站，
+更是将学习的东西统统放进来。
+督促自己学习。
+最主要的是成就感。
+不被比人认可的滋味是很难受的。&lt;/p&gt;
+
+&lt;p&gt;努力吧，
+为了自己！&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&quot;&gt;第一篇博客&lt;/a&gt; was originally published by Ni Peng at &lt;a href=&quot;&quot;&gt;Scott Ni&lt;/a&gt; on September 27, 2013.&lt;/p&gt;</content>
+</entry>
+
+</feed>

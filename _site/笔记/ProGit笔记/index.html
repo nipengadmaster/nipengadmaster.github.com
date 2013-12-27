@@ -1,0 +1,432 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Progit笔记 </title>
+
+<meta name="description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta name="keywords" content="git">
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Progit笔记">
+<meta property="og:description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta property="og:url" content="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0">
+<meta property="og:site_name" content="Scott Ni">
+
+
+
+
+
+<link rel="canonical" href="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Scott Ni Feed">
+<link rel="author" href="https://plus.google.com/u/0/105487198769272638847?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.min.css">
+<!-- Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+<style type="text/css">body {background-image:url(/images/ps_neutral.png);}</style>
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a83a943ad8eb0be645a1efefca583ea5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</head>
+
+<body id="post"  itemscope itemtype="http://schema.org/WebPage">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href=""><i class="icon-home icon-large" icon-large></i>Home</a></li>
+
+		<li>
+			<a href="#"><i class="icon-user icon-large"></i>About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/np.jpg" alt="Ni Peng photo" class="author-photo">
+					<h4>Ni Peng </h4>
+					<p></p>
+				</li>
+				<li><a href="/about/"><i class="icon-info-sign icon-large"></i>Learn More</a></li>
+				<li>
+					<a href="mailto:nipengmath@gmail.com"><i class="icon-envelope"></i> Email</a>
+				</li>
+				
+				
+				<li>
+					<a href="https://plus.google.com/u/0/105487198769272638847"><i class="icon-google-plus"></i> Google+</a>
+				</li>
+				
+				<li>
+					<a href="http://github.com/nipengadmaster"><i class="icon-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+				
+
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#"><i class="icon-book icon-large"></i>Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/archive/"><i class="icon-bookmark icon-large"></i>All Posts</a></li>
+								<li><a href="/tags/"><i class="icon-tags icon-large"></i>All Tags</a></li>
+								<li><a href="/categories/"><i class="icon-folder-close icon-large"></i>All Categories</a></li>
+
+				<li>
+					<a href="#"><i class="icon-folder-open icon-large"></i>Catagory</a>
+					<ul class="dl-submenu">
+						
+						<li>
+							<a href = "/categories/#杂记">杂记(1)</a>
+						</li>
+						
+						<li>
+							<a href = "/categories/#笔记">笔记(7)</a>
+						</li>
+						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+					<a href="#"><i class="icon-tasks icon-large"></i>Projects</a>
+				</li>
+				<li>
+					<a href="#"><i class="icon-camera-retro icon-large"></i>Gallery</a>
+				</li>
+
+
+
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title" itemprop="name"><a href="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0" rel="bookmark" title="Progit笔记" itemprop="url">Progit笔记</a></h1>
+        
+        <h2>November 18, 2013</h2>
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content" itemprop="description">
+      <h2>《Progit中文版》</h2>
+
+<h3>1. 起步</h3>
+
+<ol>
+<li>git不保存前后变化的差异，而是直接快照</li>
+<li>使用SHA-1算法计算数据的校验和</li>
+<li>三种状态：
+
+<ul>
+<li>已提交(commited)</li>
+<li>已修改(modified)</li>
+<li>已暂存(staged)</li>
+</ul>
+</li>
+<li><p>设置git默认编辑器</p>
+
+<pre><code> git config --global core.editor emacs
+</code></pre></li>
+<li>使用帮助
+
+<ul>
+<li>git help <verb></li>
+<li>git <verb> --help</li>
+<li>man git <verb></li>
+</ul>
+</li>
+</ol>
+
+
+<h3>2. Git 基础</h3>
+
+<ol>
+<li><p>查看文件内容</p>
+
+<pre><code> cat file1
+</code></pre></li>
+<li><p>git diff：查看<code>已修改未暂存</code>文件的修改</p>
+
+<p>git diff --cached：查看<code>已暂存未提交</code>文件的修改</p></li>
+<li>git rm -f： 删除修改过的，并且已暂存的文件。force。</li>
+<li>git rm --cached: 删除版本库中文件，保留工作目录中文件。</li>
+<li>递归方式匹配文件，删除，查找
+
+<blockquote><p>fix me</p></blockquote></li>
+<li>git mv file1 file2: git 中对文件重命名。</li>
+<li>git log -p -2:
+
+<ul>
+<li>-p: 显示每次提交内容差异</li>
+<li>-2: 最近两次提交</li>
+</ul>
+</li>
+<li>git log --stat: 显示摘要，增改的行数</li>
+<li>git log:
+
+<ul>
+<li>--pretty=online 单行显示每次提交</li>
+<li>--since=2.weeks --after显示指定时间之后的提交</li>
+<li>--until, --before 显示指定时间之前的提交</li>
+</ul>
+</li>
+<li>git commit --amend: 修改最后一次提交</li>
+<li>任何提交给git的数据都可以恢复，即便在已经删除的分支中的提交。可能失去的数据仅限于没有commit过的数据。</li>
+<li>git remote -v：查看克隆的地址</li>
+<li>git remote add pb git://*.git</li>
+<li>git fetch: 只是将远程数据拉到本地，并不自动合并到当前分支。</li>
+<li>git pull = fetch + merge</li>
+<li>git remote show origin: 查看远程仓库信息</li>
+<li>git remote rename name1 name2： 对远程分支重命名</li>
+<li>git remote rm pb: 删除远程分支</li>
+<li>git tag: 列出现有标签</li>
+<li>git tag -l "v1.4.2*": 列出满足匹配条件的标签</li>
+<li>git push origin v1.5: git push不会把标签推到远程，只能手工推送。</li>
+<li>git push origin --tags: 推送所有的标签到远程。</li>
+<li>切换分支的时候最好保持一个清洁的工作区域。</li>
+<li> stashing  ammending</li>
+</ol>
+
+
+<h3>3. Git分支</h3>
+
+<ol>
+<li>git branch -d hotfix: 删除分支</li>
+<li>git mergetool: 图形界面的工具来解决问题。</li>
+<li>git branch -v: 查看各分支最后一次提交</li>
+<li>git branch --no-merged: 查看尚未合并的分支</li>
+<li>git branch -D feature: 删除未合并的分支</li>
+<li>git push origin 本地分支:远程分支   将本地分支推送到远程分支，可重命名</li>
+<li><p>fetch抓回来的新的远程分支后，仍然不能在本地编辑，所有要checkout一个新的分支，对应远程分支</p>
+
+<p>git checkout -b myserver origin/server</p></li>
+<li><p>删除远程分支：git push origin :serverfix  表示将空分支推送到远程分支，即删除。</p></li>
+<li>git rebase 衍合，在一个分支上进行的操作，在另一个分支上重演。</li>
+<li>git rebase 主分支 特性分支：检出特性分支，在主分支上重演。</li>
+<li><code>永远不要衍合那些推送到公共版本库的更新</code></li>
+</ol>
+
+
+<h3>4. 服务上的git</h3>
+
+<ol>
+<li>使用authorized_keys方法给用户授权。</li>
+</ol>
+
+
+<h3>5. 分布式git</h3>
+
+<ol>
+<li>不要在更新中提交多余的空白符</li>
+<li>将每次提交限制在一次逻辑单元，适当分解为多次小提交。</li>
+<li>git add --patch
+
+<blockquote><p>fixme</p></blockquote></li>
+<li><p><code>学习提交说明</code></p>
+
+<pre><code> git clone git://git.kernel.org/pub/scm/git/git/git
+</code></pre></li>
+<li>git diff master…contrib: 查看特性分支和它同master分支的共同祖先之间的差异。</li>
+<li>先将代码合并到临时特性分支，等到该分支稳定下来并通过测试，再并入develop分支，然后，经时间检验，代码可以正常工作相当长的一段时间，再并入主分支发布。</li>
+<li>大项目合并流程：
+
+<ul>
+<li>master 发布</li>
+<li>next 用于合并基本稳定特性</li>
+<li>pu  用于合并仍需改进特性</li>
+<li>maint 用于出错维护</li>
+</ul>
+</li>
+<li>git shortlog 可以方便快捷的制作一份修改日志。</li>
+</ol>
+
+
+<h3>6.Git工具</h3>
+
+<ol>
+<li>git reflog：查看引用日志</li>
+<li>git show HEAD@{5}: 查看HEAD在第5次前的commit记录</li>
+<li>git show master@{yesterday} 查看一定时间前分支在哪</li>
+<li>git show HEAD^: 指HEAD的父提交</li>
+<li>两点：
+
+<ul>
+<li>git log master..experiemnt：指所有“可以从experiemnt分支中获得而不能从master中获得的提交”</li>
+<li>git log refA..refB
+&lt;=> git log ^refA refB
+&lt;=> git log refB --not refA</li>
+</ul>
+</li>
+<li>三点：指定被两个引用中的一个包含但不被两者<code>同时</code>包含的分支
+
+<ul>
+<li>git log master…experiment</li>
+<li>git log --left-right master…experiment： 显示提交在哪个分支</li>
+</ul>
+</li>
+<li>git stash: 往堆栈中推送一个新的储藏。</li>
+<li>git stash list: 列出暂存的东西</li>
+<li>git stash apply: 应用刚存的东西</li>
+<li>git statsh apply stash@2: 应用第2个储藏</li>
+<li><p>apply只尝试应用储藏的工作，并不删除储藏的内容。如果应用完之后删除，则可以运行</p>
+
+<pre><code>git stash pop
+</code></pre></li>
+<li>git stash branch mybranch: 创建一个新的分支，检出你储藏的工作提交，重新应用你的工作。如果成功，将会丢弃储藏。</li>
+<li>git commit --amend 改写最近一次提交</li>
+<li>git reset HEAD^: 重置提交</li>
+<li><p>从所有提交中删除一个文件,<code>慎重使用</code></p>
+
+<pre><code>git filter-branch --tree-filter 'rm -f *~' HEAD
+</code></pre>
+
+<p> --tree-filter: 每次检出项目时，先执行指定的命令，然后重新提交结果。</p></li>
+<li>git blame -L 12,22 mytest.py: 查看每一行代码的最后提交者及日期，-L 指定行数。</li>
+<li><p>bisect会在你的提交历史中二分查找快速定位错误代码引入时间。</p>
+
+<pre><code>git bisect start        # 设定查找开始
+git bisect bad          # 设定当前位置为bad
+git bisect good v1.0    # 设定好代码的位置
+[*******]               # 到底good和bad提交的中间位置
+# 重新运行代码，查看是对是错, 并标记good/bad
+git bisect good
+[*******]               # 到达下一个二分查找位置
+…
+</code></pre></li>
+</ol>
+
+
+<h3>7. 自定义Git</h3>
+
+<ol>
+<li>git config --global core.editor emacs 配置默认编辑器</li>
+<li>git config --global color.ui true  git中的着色</li>
+<li>外部合并工具：P4Merge</li>
+<li><p>格式化和空白符</p>
+
+<pre><code> git config --global core.autocrlf 
+</code></pre>
+
+<h3>8.git 与其他系统</h3></li>
+</ol>
+
+
+<h3>9.Git内部原理</h3>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/index.html#git" title="Pages tagged git" rel="tag" class="tag">git</a></span>
+        <span><a href="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0" rel="bookmark" title="Progit笔记" itemprop="url">Progit笔记</a> was published on <span class="entry-date date published updated"><time datetime="2013-11-18T00:00:00+08:00" itemprop="datePublished">November 18, 2013</time></span></span>
+        
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="/about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span>
+        
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    
+    <div class="read-more">
+      
+        <div class="read-more-header">
+          <a href="/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" class="read-more-btn">Read More</a>
+        </div><!-- /.read-more-header -->
+        <div class="read-more-content">
+          <h3><a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0" title="Mlapp笔记">Mlapp笔记</a></h3>
+          <p>{% include JB/setup %}## MLAPP笔记### 1. Introduction1. 机器学习分为两类	* 预测性/有监督学习--分类/模式识别/回归/`有序回归`	* 描述性/无监督学习--知识挖掘	* 强化学习2. 分类：二分类，多分类，多标签分类...&hellip; <a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0">Continue reading</a></p>
+        </div><!-- /.read-more-content -->
+      
+      <div class="read-more-list">
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" title="Stanfordcorenlp Java代码 学习笔记">Stanfordcorenlp Java代码 学习笔记</a></h4>
+            <span>Published on October 28, 2013</span>
+          </div><!-- /.list-item -->
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" title="Headfirstjava 学习笔记">Headfirstjava 学习笔记</a></h4>
+            <span>Published on October 28, 2013</span>
+          </div><!-- /.list-item -->
+        
+      </div><!-- /.read-more-list -->
+      
+    </div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2012-2013 All Rights Reserved. By Ni Peng.
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+
+
+	        
+
+</body>
+</html>

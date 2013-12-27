@@ -1,0 +1,422 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>情感分析 基础理论 </title>
+
+<meta name="description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta name="keywords" content="情感分析, NLP">
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="情感分析 基础理论">
+<meta property="og:description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta property="og:url" content="/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA">
+<meta property="og:site_name" content="Scott Ni">
+
+
+
+
+
+<link rel="canonical" href="/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Scott Ni Feed">
+<link rel="author" href="https://plus.google.com/u/0/105487198769272638847?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.min.css">
+<!-- Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+<style type="text/css">body {background-image:url(/images/ps_neutral.png);}</style>
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a83a943ad8eb0be645a1efefca583ea5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</head>
+
+<body id="post"  itemscope itemtype="http://schema.org/WebPage">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href=""><i class="icon-home icon-large" icon-large></i>Home</a></li>
+
+		<li>
+			<a href="#"><i class="icon-user icon-large"></i>About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/np.jpg" alt="Ni Peng photo" class="author-photo">
+					<h4>Ni Peng </h4>
+					<p></p>
+				</li>
+				<li><a href="/about/"><i class="icon-info-sign icon-large"></i>Learn More</a></li>
+				<li>
+					<a href="mailto:nipengmath@gmail.com"><i class="icon-envelope"></i> Email</a>
+				</li>
+				
+				
+				<li>
+					<a href="https://plus.google.com/u/0/105487198769272638847"><i class="icon-google-plus"></i> Google+</a>
+				</li>
+				
+				<li>
+					<a href="http://github.com/nipengadmaster"><i class="icon-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+				
+
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#"><i class="icon-book icon-large"></i>Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/archive/"><i class="icon-bookmark icon-large"></i>All Posts</a></li>
+								<li><a href="/tags/"><i class="icon-tags icon-large"></i>All Tags</a></li>
+								<li><a href="/categories/"><i class="icon-folder-close icon-large"></i>All Categories</a></li>
+
+				<li>
+					<a href="#"><i class="icon-folder-open icon-large"></i>Catagory</a>
+					<ul class="dl-submenu">
+						
+						<li>
+							<a href = "/categories/#杂记">杂记(1)</a>
+						</li>
+						
+						<li>
+							<a href = "/categories/#笔记">笔记(7)</a>
+						</li>
+						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+					<a href="#"><i class="icon-tasks icon-large"></i>Projects</a>
+				</li>
+				<li>
+					<a href="#"><i class="icon-camera-retro icon-large"></i>Gallery</a>
+				</li>
+
+
+
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title" itemprop="name"><a href="/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA" rel="bookmark" title="情感分析 基础理论" itemprop="url">情感分析 基础理论</a></h1>
+        
+        <h2>October 17, 2013</h2>
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content" itemprop="description">
+      <p>Included file JB/setup not found in _includes directory</p>
+
+<p><strong>Ad目前工作</strong></p>
+
+<ul>
+<li>情感语料词典  nlp/arc_nlp/sentiment/mmseg_data/nmap.py</li>
+<li>关联规则训练数据 dmp1: mongo conn.weibo_db.dependence表</li>
+</ul>
+
+
+<h2>一.基本理论</h2>
+
+<h3>定义</h3>
+
+<p>情感分析又称评论挖掘，意见挖掘，是一种对网上各种资源评论及其它内容进行提取、分析、处理、归纳、推理的技术。</p>
+
+<h3>划分</h3>
+
+<h4>按处理文本粒度</h4>
+
+<h5>词语级</h5>
+
+<p>Word-level Sentiment Analysis,WSA</p>
+
+<p>构建情感词典，识别候选词，判断候选词情感极性与强度。</p>
+
+<p>情感词典构建：</p>
+
+<ol>
+<li><p>人工收集种子情感词</p></li>
+<li><p>采用机器学习方法扩充种子情感词构建情感词典。</p></li>
+</ol>
+
+
+<p>在识别候选词时,采用统计与规则相结合方法实现,例如利用词汇共现关系识别候选词,并且根据连词规则进一步精确识别候选词。在识别候选词的基础上,采用无监督、有 监督和半监督方式判定极性和强度。</p>
+
+<h5>句子级</h5>
+
+<p>Sentence-level Sentiment Analysis,SSA</p>
+
+<p>识别情感词、分析句子结构以及判别情感极性和强度。</p>
+
+<p>基于无监督的句级情感分析根据句子中情感词的极性和强度累加值确定情感极性与强度。基于有监督的情感句分类是主流模型：</p>
+
+<ul>
+<li><p>SVM</p></li>
+<li><p>最大熵(Maximum Entropy,ME)</p></li>
+<li><p>条件随机场(CRFs)等</p></li>
+</ul>
+
+
+<h5>篇章级</h5>
+
+<p>Document-level Sentiment Analysis,DSA</p>
+
+<p>指识别篇章对某一事物的情感极性和强度。</p>
+
+<p>其相关过程包括:情感句分析、篇章级情感特征提取以及构建篇章级情感分类器。</p>
+
+<ul>
+<li><p>基于无监督的篇章级情感分析模型主要根据情感词典识别情感词,然后通过累加情感词的情感极性和强度判别篇章情感极性和强度;</p></li>
+<li><p>基于有监督的篇章情感分析主要通过提取情感特征,进而构建情感分类器 来预测篇章情感极性。</p></li>
+</ul>
+
+
+<h4>按处理文本类型</h4>
+
+<ul>
+<li><p>基于舆情的情感分析</p></li>
+<li><p>基于商品评论的情感分析</p></li>
+</ul>
+
+
+<h3>组成</h3>
+
+<ul>
+<li><p>主题</p></li>
+<li><p>观点</p></li>
+<li><p>意见持有者</p></li>
+<li><p>情感</p></li>
+</ul>
+
+
+<h3>任务</h3>
+
+<ul>
+<li><p>主题抽取</p></li>
+<li><p>意见持有者识别</p></li>
+<li><p>陈述选择</p></li>
+<li><p>情感分析</p></li>
+</ul>
+
+
+<h3>观点模型</h3>
+
+<h4>直接观点</h4>
+
+<p>五元组(o_j, f_jk, oo_ijkl, h_i, t_l):</p>
+
+<ul>
+<li>o_j: 观点j</li>
+<li>f_jk: 观点j的第k个特征</li>
+<li>h_i:观点持有者</li>
+<li>oo_ijkl: 观点持有者h_i对特征f_jk在时间t_l时的观点倾向，可以是积极、消极、中立</li>
+<li>t_l:观点持有者h_i对特征f_jk发表看法的时间</li>
+</ul>
+
+
+<h4>相对观点</h4>
+
+<p>没有直接评价一个对象的好坏，而是借助一个或对个对象作为参照</p>
+
+<h3>基本框架</h3>
+
+<ol>
+<li><p>从网络中获取原数据</p></li>
+<li><p>主客观信息分类，目前技术来说，主客观识别比情感分析更难。</p></li>
+<li><p>对主观文本进行语言层面、技术层面、情感倾向性分析，得到情感分析结果</p></li>
+<li><p>应用：市场预测、大众评论、信息预测</p></li>
+</ol>
+
+
+<h2>二.情感分析的研究</h2>
+
+<h3>信息抽取</h3>
+
+<h4>主题抽取</h4>
+
+<h5>显式主题</h5>
+
+<ul>
+<li><p>根据短语组成和位置特点，采用相似性测试方法确定主题</p></li>
+<li><p>根据主题和一些指标词共现特征来识别常现和非常现的主题术语，互信息PMI</p></li>
+<li><p>根据术语词典确定主题词汇</p></li>
+</ul>
+
+
+<h5>隐式主题</h5>
+
+<h4>陈述的选择</h4>
+
+<ul>
+<li><p>BoosTexter 分类器</p></li>
+<li><p>基于规则的陈述识别方法</p></li>
+</ul>
+
+
+<h4>情感词抽取及极性判断</h4>
+
+<ul>
+<li><p>基于语料库的方法</p></li>
+<li><p>基于词典的方法</p></li>
+</ul>
+
+
+<h4>观点持有者抽取</h4>
+
+<ul>
+<li>CRF</li>
+</ul>
+
+
+<h3>情感倾向性分析</h3>
+
+<ol>
+<li><p>词汇短语层</p></li>
+<li><p>句子层</p></li>
+</ol>
+
+
+<p>层叠CRFs模型</p>
+
+<ol>
+<li>文本层</li>
+</ol>
+
+
+<h2>三.应用</h2>
+
+<ol>
+<li><p>市场分析决策</p></li>
+<li><p>大众评论研究</p></li>
+</ol>
+
+
+<h2>四.存在问题</h2>
+
+<ol>
+<li><p>缺少语料及平台</p></li>
+<li><p>无论监督学习还是非监督学习，大部分研究者仅局限在观点词、短语、语法信息判断观点词的极性，而忽略了语境。</p></li>
+<li><p>主观性文本较随意性口语化。</p></li>
+<li><p>动词对情感词的影响</p></li>
+</ol>
+
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/index.html#情感分析" title="Pages tagged 情感分析" rel="tag" class="tag">情感分析</a><a href="/tags/index.html#NLP" title="Pages tagged NLP" rel="tag" class="tag">NLP</a></span>
+        <span><a href="/%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA" rel="bookmark" title="情感分析 基础理论" itemprop="url">情感分析 基础理论</a> was published on <span class="entry-date date published updated"><time datetime="2013-10-17T00:00:00+08:00" itemprop="datePublished">October 17, 2013</time></span></span>
+        
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="/about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span>
+        
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    
+    <div class="read-more">
+      
+        <div class="read-more-header">
+          <a href="/%E7%AC%94%E8%AE%B0/DeepLearning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" class="read-more-btn">Read More</a>
+        </div><!-- /.read-more-header -->
+        <div class="read-more-content">
+          <h3><a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0" title="Mlapp笔记">Mlapp笔记</a></h3>
+          <p>{% include JB/setup %}## MLAPP笔记### 1. Introduction1. 机器学习分为两类	* 预测性/有监督学习--分类/模式识别/回归/`有序回归`	* 描述性/无监督学习--知识挖掘	* 强化学习2. 分类：二分类，多分类，多标签分类...&hellip; <a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0">Continue reading</a></p>
+        </div><!-- /.read-more-content -->
+      
+      <div class="read-more-list">
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0" title="Progit笔记">Progit笔记</a></h4>
+            <span>Published on November 18, 2013</span>
+          </div><!-- /.list-item -->
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" title="Stanfordcorenlp Java代码 学习笔记">Stanfordcorenlp Java代码 学习笔记</a></h4>
+            <span>Published on October 28, 2013</span>
+          </div><!-- /.list-item -->
+        
+      </div><!-- /.read-more-list -->
+      
+    </div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2012-2013 All Rights Reserved. By Ni Peng.
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+
+
+	        
+
+</body>
+</html>

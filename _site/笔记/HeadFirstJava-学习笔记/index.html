@@ -1,0 +1,472 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Headfirstjava 学习笔记 </title>
+
+<meta name="description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta name="keywords" content="Java">
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Headfirstjava 学习笔记">
+<meta property="og:description" content="因为太没有安全感 才要找地方写下一些东西">
+<meta property="og:url" content="/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">
+<meta property="og:site_name" content="Scott Ni">
+
+
+
+
+
+<link rel="canonical" href="/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Scott Ni Feed">
+<link rel="author" href="https://plus.google.com/u/0/105487198769272638847?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.min.css">
+<!-- Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+<style type="text/css">body {background-image:url(/images/ps_neutral.png);}</style>
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a83a943ad8eb0be645a1efefca583ea5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</head>
+
+<body id="post"  itemscope itemtype="http://schema.org/WebPage">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href=""><i class="icon-home icon-large" icon-large></i>Home</a></li>
+
+		<li>
+			<a href="#"><i class="icon-user icon-large"></i>About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/np.jpg" alt="Ni Peng photo" class="author-photo">
+					<h4>Ni Peng </h4>
+					<p></p>
+				</li>
+				<li><a href="/about/"><i class="icon-info-sign icon-large"></i>Learn More</a></li>
+				<li>
+					<a href="mailto:nipengmath@gmail.com"><i class="icon-envelope"></i> Email</a>
+				</li>
+				
+				
+				<li>
+					<a href="https://plus.google.com/u/0/105487198769272638847"><i class="icon-google-plus"></i> Google+</a>
+				</li>
+				
+				<li>
+					<a href="http://github.com/nipengadmaster"><i class="icon-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+				
+
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#"><i class="icon-book icon-large"></i>Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/archive/"><i class="icon-bookmark icon-large"></i>All Posts</a></li>
+								<li><a href="/tags/"><i class="icon-tags icon-large"></i>All Tags</a></li>
+								<li><a href="/categories/"><i class="icon-folder-close icon-large"></i>All Categories</a></li>
+
+				<li>
+					<a href="#"><i class="icon-folder-open icon-large"></i>Catagory</a>
+					<ul class="dl-submenu">
+						
+						<li>
+							<a href = "/categories/#杂记">杂记(1)</a>
+						</li>
+						
+						<li>
+							<a href = "/categories/#笔记">笔记(7)</a>
+						</li>
+						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+					<a href="#"><i class="icon-tasks icon-large"></i>Projects</a>
+				</li>
+				<li>
+					<a href="#"><i class="icon-camera-retro icon-large"></i>Gallery</a>
+				</li>
+
+
+
+		
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title" itemprop="name"><a href="/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" rel="bookmark" title="Headfirstjava 学习笔记" itemprop="url">Headfirstjava 学习笔记</a></h1>
+        
+        <h2>October 28, 2013</h2>
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content" itemprop="description">
+      <p>Included file JB/setup not found in _includes directory</p>
+
+<h4>1. 基本概念</h4>
+
+<ol>
+<li><p>java中integer和boolean两种类型不相容，因此不能写</p>
+
+<pre><code> int x = 1;
+ while (x) {}
+</code></pre></li>
+<li><p>println会在最后插入换行，print不会.</p></li>
+<li>String [] lst = ["a", "b"]; lst.length;</li>
+<li>Math.random() 随机产生[0,1]之间的小数</li>
+<li>int x = (int) 24.6;</li>
+<li>+: 连接字符串</li>
+<li>面向对象优点：有时不需要改动已经测试号的程序。</li>
+<li><p>创建对象需要两个类：一个是被操作的类（比如Dog, AlarmClock等），另一个是测试该类的类。测试用的类带有main()，在其中建立存取被测对象。</p>
+
+<pre><code> class Dog{}
+ class DogTestDrive{}
+</code></pre></li>
+<li><p>java主动管理内存</p></li>
+<li>全局变量：任何变量只要加上public，static, final，基本上都会变成全局变量取用的常数。</li>
+<li>数量庞大的个别文件，可以pkzip存档为Java Archive-.jar文件。在jar文件中可以引入一个简单的文件，manifest，里面定义jar中哪个文件带有应用程序的main()方法。</li>
+<li>所有的java程序都定义在类中。</li>
+<li>创建类时，同时创建独立的测试用的类。</li>
+<li>Java很注重类型。必须声明所有变量的类型。</li>
+<li>变量有两种：primitive主数据类型用来保存基本类型的值，包括整数，布尔，浮点数; 对象引用保存的是对象的引用（？？）</li>
+<li>变量必须要有类型，必须要有名称。</li>
+<li><p>primitive主数据类型：</p>
+
+<pre><code>布尔：boolean true/false
+char: 16 bits 
+整型：byte（8位二进制）short(16位) int(32位) long（64位）
+浮点：float(32位) double(64位)  
+</code></pre></li>
+<li>float f = 32.5f;除非加上"f"，否则小数都会被java当作double处理。</li>
+<li>确保变量能存下保存的值。</li>
+<li>命名规则：
+
+<ul>
+<li>名称必须以字母，下划线，$开头，不能以数字开头</li>
+<li>除了第一个字符外，后面就可以用数字，反正不要用在第一个字符就行。</li>
+<li>避开Java保留字。</li>
+</ul>
+</li>
+<li>对primitive主数据类型的变量来说，变量值就是所代表的值。对<code>引用</code>变量来说，变量值是取得特定对象的位表示法。</li>
+<li>引用大小未知；对任意一个Java虚拟机来说，所有的引用大小都一样；不能对引用变量运算。</li>
+<li>primitive主数据类型变量值是该值的字节所表示的；引用变量的值代表位于堆之对象的存取方法。引用变量如同遥控器。没有引用到任何对象的引用变量的值位null值。</li>
+<li>数组一定是对象。</li>
+<li>类描述的是对象知道什么与执行什么</li>
+<li>方法运用形参，调用方传入实参</li>
+<li>java是通过值传递的，通过拷贝传递</li>
+<li>可以忽略方法的返回值</li>
+<li>如何隐藏数据？使用公有，私有修饰符。将实例变量标记为私有，提供公有gettet,setter控制存取。</li>
+<li>实例变量永远都有默认值:整数0，浮点0.0，布尔false，引用变量null</li>
+<li>null表示没有操作对象的远程控制，是引用不是对象</li>
+<li>实例变量声明在类内，而不是方法内。局部变量声明在方法中。局部变量在使用前必须初始化，没有默认值。</li>
+<li><p>equals和==的区别</p>
+
+<ul>
+<li>当参数引用的对象与当前对象为同一对象时，“==“ 和 ”equals” 均为true。</li>
+<li><p>如果两个对象的类型一致，并且内容一致，则“equals”返回true,这些类有：
+java.io.file,java.util.Date,java.lang.string,包装类（Integer,Double等）</p>
+
+<pre><code>    Animal  animal1=new Dog();
+    Animal  animal2=new  Cat();
+    Animal animal3=animal1;
+    则animal1==animal2   (FALSE)
+    animal1.equals(animal2)  (false)
+    animal1==animal3   (true)
+    animal1.equals(animal3)   (true)
+
+    Integer int1=new Integer(1);
+    Integer int2=new Integer(1);
+    String str1=new String("hello");
+    String str2=new String("hello");
+    int1==int2   输出：false,因为不同对象
+    int1.equals(int2)   输出：TRUE
+    str1==str2   (false)
+    str1.equals(str2)   (true)
+</code></pre></li>
+</ul>
+</li>
+<li><p>ArrayList.remove</p>
+
+<pre><code>remove(int index) 移除下标为index的元素，返回移除的元素。
+remove(object o) 移除元素o,返回true/false
+</code></pre></li>
+<li>伪码--测试码--真实码</li>
+<li>伪代码记录要做什么，而不是怎么做</li>
+<li>开始编写代码之前，先学出测试方法用的代码。</li>
+<li>极限编程（XP）方法论</li>
+<li>思考与编写测试代码有助于了解被测试程序应该要做哪些事情。</li>
+<li>Integer.parseInt("3");只对string为数字是有用。</li>
+<li>for(int cell: locationCells){}</li>
+<li>x++; ++x;</li>
+<li>int randomNum = (int)(Math.random()*8);</li>
+<li>ArrayList：Java函数库的一个类，可变的。</li>
+<li><p>ArrayList无法保存primitive主数据类型。</p>
+
+<p>不能保存int, float, 等primitive等数据类型，不过可以使用Integer等。</p></li>
+<li><p>布尔表达式：且（&amp;&amp;）或(||)非（!）</p></li>
+<li>&amp;,| 与&amp;&amp;, ||的区别？&amp;和| 是可以用做逻辑运算也可以用做位运算。
+
+<ul>
+<li>运算数据类型支持不同：&amp;&amp;,||只支持布尔类型运算；&amp;,|可以支持int, boolean,char三种类型。</li>
+<li>逻辑运算不同：&amp;&amp;,||条件运算符;&amp;，|无条件运算符。</li>
+</ul>
+
+
+<p>计算p1&amp;&amp;p2时,Java先计算p1,若p1为true再计算p2;若p1为false,则不再计算P2,因此&amp;&amp;又称为条件与运算符.而&amp;的两个运算对象都要计算,所以,&amp;又称为无条件与运算符.类似的还有 "|| " (条件或运算符,p1 || p2,Java先计算p1,若p1为FALSE再计算P2,若P1为TRUE,则不再计算P2)和 "| " (无条件运算符,两边对象都要计算) .</p>
+
+<p>例如:(a &lt;2)&amp;(b-- &lt;2) 保证(b-- &lt;2)能被计算.这样,无论a是否小于2,变量b都要减1.</p>
+
+<p>要避免使用&amp;和|运算符,它们好处不大.使用&amp;和|运算符会使程序可读性降低,并且可能导致错误,比如:(x!=0)&amp;(100/x)当x为0时产生运行错误,而(x!=0)&amp;&amp;(100/x)没问题</p></li>
+<li>java程序不会因为import而变大变慢</li>
+<li>除了java.lang这个包里的类，要用到其他的类都要指定完整名称。</li>
+</ol>
+
+
+<h4>7. 继承与多态</h4>
+
+<ol>
+<li>继承和包含的关系：is-a测试。</li>
+<li>super 可指定使用父类的方法。</li>
+<li>父类通过存取权限限制子类是否可继承某些特定成员。
+
+<ul>
+<li>private: 不可继承</li>
+<li>default</li>
+<li>protected</li>
+<li>public : 可继承</li>
+</ul>
+</li>
+<li>滥用继承了吗，什么时候使用继承
+
+<ul>
+<li>当某个子类比父类更有特定意义时</li>
+<li>当行为程序应该被多个相同基本类型所共享时</li>
+<li>is-a测试通过</li>
+</ul>
+</li>
+<li>子类是extends父类出来的</li>
+<li>子类会继承父类所有public类型的实例变量和方法，但不继承所有的private类型的变量方法</li>
+<li>继承下来的方法可以被覆盖，但实例变量不能被覆盖，因为实例变量不能定义行为。</li>
+<li>is-a测试是单向的，具有传递性。</li>
+<li>java只是由一堆类组成的。</li>
+<li>多态性：发送消息给某个对象，让该对象自行决定响应何种行为。
+
+<ul>
+<li>通过将子类对象引用赋值给超类对象引用变量来实现动态方法调用。</li>
+<li>java 的这种机制遵循一个原则：当超类对象引用变量引用子类对象时，<strong>被引用对象的类型</strong>而不是引用变量的类型决定了调用谁的成员方法，但是这个被调用的方法必须是在超类中定义过的，也就是说被子类覆盖的方法。</li>
+</ul>
+</li>
+<li>方法的重写<strong>Overriding</strong>和重载<strong>Overloading</strong>是Java多态性的不同表现。重写Overriding是父类与子类之间多态性的一种表现，重载Overloading是一个类中多态性的一种表现。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写(Overriding)。子类的对象使用这个方法时，将调用子类中的定义，对它而言，父类中的定义如同被“屏蔽”了。如果在一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型，则称为方法的重载(Overloading)。Overloaded的方法是可以改变返回值的类型。</li>
+<li><p>实际上这里涉及方法调用的优先问题 ，优先级由高到低依次为：</p>
+
+<pre><code>this.show(o) &gt; super.show(o) &gt;
+this.show((super)o) &gt; super.show((super)o)
+</code></pre></li>
+<li>子类层次限制：一般不超过一，两层。也有例外，特别是GUI类这边。</li>
+<li>没有私有类概念，不过有办法防止某个类被作出子类：
+
+<ul>
+<li>存取控制：类不标注为公有。非公有类智能被同一个包的类作出子类。</li>
+<li>final修饰符：表示为继承树的末端，不能被继承。</li>
+<li>让类只拥有private的构造程序。</li>
+</ul>
+</li>
+<li>防止特定方法被覆盖，将该方法标注为final。将整个类标注为final，表示没有任何方法被覆盖。</li>
+<li>方法是合约的标志。</li>
+<li>覆盖的方法参数必须一样，且返回类型必须兼容。</li>
+<li>子类覆盖父类方法，覆盖规则：
+
+<ul>
+<li>参数必须一样，且返回类型要兼容。参数不一样则不是覆盖，是overload</li>
+<li>不能降低方法的存取权限。父类是public，子类不能是private。</li>
+</ul>
+</li>
+<li>重载(overload)的意义是两个方法，名称相同，参数不同。<strong>重载和继承，多态毫无关系</strong>。重载方法和覆盖方法不一样。
+
+<ul>
+<li>重载返回类型可以不同。</li>
+<li>不能只是返回类型不同而参数相同。</li>
+<li>可以修改存取权限。</li>
+</ul>
+</li>
+</ol>
+
+
+<h4>8.接口与抽象类</h4>
+
+<ol>
+<li><p>abstract: 通过标记类位abstract，则不管在哪里，这个类就不能创建任何类型的实例。</p>
+
+<pre><code> abstract class Canine extends Animal{
+     public void roam() {}
+ }
+</code></pre></li>
+<li>抽象类除了被继承过之外，没有用途，没有值，没有目的。</li>
+<li>抽象类表示此类必须被extend过，抽象的方法表示该方法一定被覆盖过override</li>
+<li>抽象的方法没有实体</li>
+<li>如果声明了一个抽象的方法，必须将类标记为抽象类。不能在非抽象类中拥有抽象方法。</li>
+<li>抽象方法的意义：
+
+<ul>
+<li>就算无法实现出方法的内容，还是可以定义出一组子型共同的协议。</li>
+<li>支持多态</li>
+</ul>
+</li>
+<li>抽象方法没有内容，只是为了标记出多态存在。</li>
+<li>必须实现所有的抽象的方法。</li>
+<li></li>
+</ol>
+
+
+<h4>9.构造器与垃圾收集器</h4>
+
+<h4>10.数字局静态</h4>
+
+<h4>11.异常处理</h4>
+
+<h4>12.图形用户接口</h4>
+
+<h4>13.Swing</h4>
+
+<h4>14.序列化和文件的输入输出</h4>
+
+<h4>15.网络与线程</h4>
+
+<h4>16.集合与泛型</h4>
+
+<h4>17.包，jar存档文件和部署</h4>
+
+<h4>18.远程部署RMI</h4>
+
+<h3>书籍推荐</h3>
+
+<ol>
+<li>《Head First 设计模式》</li>
+<li>《极限编程》</li>
+</ol>
+
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/index.html#Java" title="Pages tagged Java" rel="tag" class="tag">Java</a></span>
+        <span><a href="/%E7%AC%94%E8%AE%B0/HeadFirstJava-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" rel="bookmark" title="Headfirstjava 学习笔记" itemprop="url">Headfirstjava 学习笔记</a> was published on <span class="entry-date date published updated"><time datetime="2013-10-28T00:00:00+08:00" itemprop="datePublished">October 28, 2013</time></span></span>
+        
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="/about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span>
+        
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    
+    <div class="read-more">
+      
+        <div class="read-more-header">
+          <a href="/%E7%AC%94%E8%AE%B0/DL-for-NLP" class="read-more-btn">Read More</a>
+        </div><!-- /.read-more-header -->
+        <div class="read-more-content">
+          <h3><a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0" title="Mlapp笔记">Mlapp笔记</a></h3>
+          <p>{% include JB/setup %}## MLAPP笔记### 1. Introduction1. 机器学习分为两类	* 预测性/有监督学习--分类/模式识别/回归/`有序回归`	* 描述性/无监督学习--知识挖掘	* 强化学习2. 分类：二分类，多分类，多标签分类...&hellip; <a href="/%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0">Continue reading</a></p>
+        </div><!-- /.read-more-content -->
+      
+      <div class="read-more-list">
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/ProGit%E7%AC%94%E8%AE%B0" title="Progit笔记">Progit笔记</a></h4>
+            <span>Published on November 18, 2013</span>
+          </div><!-- /.list-item -->
+        
+          <div class="list-item">
+            <h4><a href="/%E7%AC%94%E8%AE%B0/StanfordCoreNlp-java%E4%BB%A3%E7%A0%81-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" title="Stanfordcorenlp Java代码 学习笔记">Stanfordcorenlp Java代码 学习笔记</a></h4>
+            <span>Published on October 28, 2013</span>
+          </div><!-- /.list-item -->
+        
+      </div><!-- /.read-more-list -->
+      
+    </div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2012-2013 All Rights Reserved. By Ni Peng.
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+
+
+	        
+
+</body>
+</html>

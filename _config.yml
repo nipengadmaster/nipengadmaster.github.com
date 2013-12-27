@@ -1,0 +1,58 @@
+title:            Scott Ni
+description:      因为太没有安全感 才要找地方写下一些东西
+# disqus_shortname: ScottNi
+# Comment out url when working locally to resolve base urls correctly
+# url: http://eureland.tk
+
+# Owner/author information
+owner:
+  name:           Ni Peng
+  avatar:         np.jpg
+#  bio:            "人生就是不停的战斗，即使天寒地冻，路远马亡。"
+  email:          nipengmath@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:   nipengadmaster
+  weiboid: feiinniao
+  weiboname: Peng_Ni
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus: https://plus.google.com/u/0/105487198769272638847
+
+# Background image to be tiled on all pages
+background: ps_neutral.png
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+analysis: baidu
+# Links to include in top navigation
+# For external links add external: true
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Shanghai
+future:      true
+pygments:    true
+markdown:    rdiscount
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+# Amount of post to show on home page
+paginate: 5
+
+ # comments :
+  #  provider : duoshuo
+    #disqus :
+     # short_name : jekyllbootstrap
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
