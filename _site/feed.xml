@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2013-12-27T14:15:19+08:00</updated>
+<updated>2013-12-27T16:18:03+08:00</updated>
 <id>/</id>
 <author>
   <name>Ni Peng</name>
@@ -24,9 +24,7 @@
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;h2&gt;MLAPP笔记&lt;/h2&gt;
+  <content type="html">&lt;h2&gt;MLAPP笔记&lt;/h2&gt;
 
 &lt;h3&gt;1. Introduction&lt;/h3&gt;
 
@@ -297,9 +295,7 @@ git bisect good
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;h2&gt;stanford-corenlp-3.2.0b.jar&lt;/h2&gt;
+  <content type="html">&lt;h2&gt;stanford-corenlp-3.2.0b.jar&lt;/h2&gt;
 
 &lt;h3&gt;1. edu.stanford.nlp.pipline&lt;/h3&gt;
 
@@ -379,9 +375,7 @@ final不能用于修饰构造方法。
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;h4&gt;1. 基本概念&lt;/h4&gt;
+  <content type="html">&lt;h4&gt;1. 基本概念&lt;/h4&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;java中integer和boolean两种类型不相容，因此不能写&lt;/p&gt;
@@ -639,9 +633,7 @@ this.show((super)o) &amp;gt; super.show((super)o)
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;h2&gt;Deep Learning for NLP(without Magic)笔记&lt;/h2&gt;
+  <content type="html">&lt;h2&gt;Deep Learning for NLP(without Magic)笔记&lt;/h2&gt;
 
 &lt;h3&gt;0.背景简介&lt;/h3&gt;
 
@@ -1364,9 +1356,7 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ad目前工作&lt;/strong&gt;&lt;/p&gt;
+  <content type="html">&lt;p&gt;&lt;strong&gt;Ad目前工作&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;情感语料词典  nlp/arc_nlp/sentiment/mmseg_data/nmap.py&lt;/li&gt;
@@ -1574,9 +1564,7 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;h2&gt;词向量&lt;/h2&gt;
+  <content type="html">&lt;h2&gt;词向量&lt;/h2&gt;
 
 &lt;p&gt;参考文章:
 1. &lt;a href=&quot;http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf&quot;&gt;《A Neural Probabilistic Language Model》&lt;/a&gt;Bengio大作.2003
@@ -1600,9 +1588,7 @@ http://www.fit.vutbr.cz/~imikolov/rnnlm
     <uri></uri>
     <email>nipengmath@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Included file JB/setup not found in _includes directory&lt;/p&gt;
-
-&lt;p&gt;今天终于有了属于自己开发的一个博客网站。
+  <content type="html">&lt;p&gt;今天终于有了属于自己开发的一个博客网站。
 现在时间是凌晨1:20。
 好久没有这么专注的做一件事。
 不是之前没有用心，而是有成就感。
