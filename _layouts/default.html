@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
+    <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
+    <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+
+   <link rel="shortcut icon" href="favicon.ico" >
+   <link rel="icon" type="image/gif" href="animated_favicon1.gif" >
+
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <link rel="stylesheet" href="/highlight.js/styles/default.css">
+    <script src="/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+var _mvq = _mvq || [];
+_mvq.push(['$setAccount', 'm-23706-1']);
+
+_mvq.push(['$logConversion']);
+(function() {
+var mvl = document.createElement('script');
+mvl.type = 'text/javascript'; mvl.async = true;
+mvl.src = ('https:' == document.location.protocol ?
+'https://static-ssl.mediav.com/mvl.js' :
+'http://static.mediav.com/mvl.js');
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(mvl, s);
+})();
+
+</script>
+
+
+
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>{{ page.title }}</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">HOME</a></span>
+        <span><a title="文章分类" class="" href="/categories/">CATEGORIES</a></span>
+        <span><a title="标签索引" class="" href="/tags/">TAGS</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <!-- <span><a title="文章目录" class="" href="/blog/">ARCHIVES</a></a></span> -->
+        <span><a schedule="学习计划" class="" href="/schedule/">SCHEDULE</a></span>
+        <span><a title="关于我" class="" href="/about/">ABOUT</a></span>
+        </nav>
+        <article class="content">
+        {{ content }}
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
+         </small>
+         </p>
+    </footer>
+
+    </div>
+  </body>
+</html>
