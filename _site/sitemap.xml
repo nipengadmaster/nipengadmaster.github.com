@@ -6,6 +6,10 @@
     
     
     <url>
+        <loc>http://nipengadmaster.github.io//debug/Problem-with-sdl</loc>
+    </url>
+    
+    <url>
         <loc>http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/MLAPP%E7%AC%94%E8%AE%B0</loc>
     </url>
     
@@ -35,6 +39,10 @@
     
     <url>
         <loc>http://nipengadmaster.github.io//%E6%9D%82%E8%AE%B0/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2</loc>
+    </url>
+    
+    <url>
+        <loc>http://nipengadmaster.github.io//sample-post</loc>
     </url>
     
 </urlset>

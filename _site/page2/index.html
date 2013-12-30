@@ -139,6 +139,10 @@ var _hmt = _hmt || [];
 							<a href = "http://nipengadmaster.github.io//categories/#笔记">笔记(7)</a>
 						</li>
 						
+						<li>
+							<a href = "http://nipengadmaster.github.io//categories/#debug">debug(1)</a>
+						</li>
+						
 					</ul>
 				</li>
 			</ul>
@@ -175,6 +179,727 @@ var _hmt = _hmt || [];
 
 <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
   
+<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-10-18T00:00:00+08:00" itemprop="datePublished"><a href="http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DL-for-NLP">October 18, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://nipengadmaster.github.io//about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title" itemprop="name"><a href="http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/DL-for-NLP" rel="bookmark" title="Dl For Nlp" itemprop="url">Dl For Nlp</a></h1>
+    
+  </header>
+  <div class="entry-content" itemprop="description">
+	  
+			<h2>Deep Learning for NLP(without Magic)笔记</h2>
+
+<h3>0.背景简介</h3>
+
+<hr />
+
+<p>目前机器学习基于人工设计的特征，机器学习只是优化参数权重已达到好的预测效果。</p>
+
+<p>表示学习：尝试自动学习好的特征来表示数据</p>
+
+<p>深度学习：尝试学习多层的表示，以增加复杂度和抽象度。</p>
+
+<p>研究深度学习的五个原因：</p>
+
+<ol>
+<li><p>表示性学习：手工设计特征复杂耗时</p></li>
+<li><p>distributed representation的必要性：NLP中原子表示法的脆弱性。</p>
+
+<p>基于聚类的Distribional similarity效果很好：</p>
+
+<ul>
+<li><p>语法分析 <strong>Brown clustering</strong></p></li>
+<li><p>实体识别 <strong>Standford NER, exchange clustering</strong></p></li>
+</ul>
+
+
+<p>Distributed representations可处理维数灾难。</p>
+
+<p>解决方案：</p>
+
+<ul>
+<li>手工设计特征</li>
+<li>假设光滑目标函数</li>
+<li>核函数方法</li>
+</ul>
+</li>
+<li><p>非监督的特征和权重学习
+现在，多数NLP/ML方法需要标记好的训练数据，不过大部分数据都是未标注的。因此需要非监督的学习。</p></li>
+<li><p>学习多层表示
+我们需要有用的中间层表示。We need composi>onality in our ML models.
+循环/递归：相同的算子应用在不同的部分上。</p></li>
+<li><p>为什么现在？
+ 2006年之前，deep architectures没有成功。
+ 改变：</p>
+
+<ul>
+<li>提出了关于非监督的预训练方法 <strong>RBM, autoencoders, contrastive estimation</strong></li>
+<li>更有效的参数估计方法</li>
+<li>更好的理解模型正则化</li>
+</ul>
+</li>
+</ol>
+
+
+<p><strong>DL取得很好的效果</strong>：</p>
+
+<ul>
+<li>Neural Language Model</li>
+<li>SENNA POS（词性分析） NER（实体识别）</li>
+<li>多核CPU和GPU使得计算速度大幅提升</li>
+</ul>
+
+
+<h3>1.基础知识</h3>
+
+<hr />
+
+<h4>1.1 Motivations</h4>
+
+<h4>1.2 从逻辑回归到神经网络</h4>
+
+<h5>单神经元</h5>
+
+<ul>
+<li>n个输入</li>
+<li>1个输出</li>
+<li>偏置单元</li>
+<li>激活函数</li>
+<li>参数W,b</li>
+</ul>
+
+
+<h5>从Maxent分类器到神经网络</h5>
+
+<p><img src="http://nipengadmaster.github.io//images/1.png" alt="image" /></p>
+
+<h5>单个神经元计算：</h5>
+
+<pre><code>h_wb(x) = f(wx+b)
+f(z) = 1/(1+e^(-z))
+</code></pre>
+
+<h5>神经网络=同时运行多个逻辑回归</h5>
+
+<p>训练W:</p>
+
+<ul>
+<li>对有监督的单层神经网络，我们可以和训练最大熵模型一样，通过梯度来训练。
+
+<ul>
+<li>SGD</li>
+<li>对偶梯度(Conjugate gradient 或 L-BFGS)</li>
+</ul>
+</li>
+</ul>
+
+
+<blockquote><pre><code>  问题1：对偶梯度(Conjugate gradient 或 L-BFGS
+</code></pre></blockquote>
+
+<ul>
+<li>多层网络较复杂，因为中间隐层逻辑单元使得方程非凸，就像hidden CRFS。不过我们可以应用相同的思路和方法，后向传播算法。</li>
+</ul>
+
+
+<p>为什么需要非线性：</p>
+
+<ul>
+<li>对逻辑回归来说，映射到概率。</li>
+<li>函数逼近，比如回归，分类。
+
+<ul>
+<li>如果没有非线性，深层神经网络并不能比线性变换做更多的事情。因为多层线性总可以转换为复杂的单层线性变换。</li>
+<li>除了在Boltzmann机/图模型下，概率理解并不是必须的。人们经常用其他非线性变换，比如tanh。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>基本概念总结：</p>
+
+<ul>
+<li>神经元 = 逻辑回归或相似函数</li>
+<li>输入层 = 输入 训练/测试 向量</li>
+<li>偏置单元 = 截距项</li>
+<li>激活 = 反应</li>
+<li>激活函数 是 logistic函数，或其他sigmoid非线性函数</li>
+<li>后向传播 =  应用在多层网络上的随机梯度下降</li>
+<li>权重衰退 = 正则化/Bayesian先验</li>
+</ul>
+
+
+<p>非监督预训练使得有效的深度学习变为可能</p>
+
+<h4>1.3 词表示(Wordrepresentations)</h4>
+
+<p><strong>The standard word representation</strong></p>
+
+<p>向量空间模型中，向量由一个1和很多0组成：</p>
+
+<blockquote><p>[0, 0, …, 0, 1, 0, …, 0]</p></blockquote>
+
+<p>维数：20k(Speech)-50k(PTB)-500k(big vocab)-13M(Google 1T)</p>
+
+<p>称作“one-hot”representation。</p>
+
+<p>存在的问题：每个词被孤立起来，比如motel和hotel相似度为0.</p>
+
+<p><strong>Distributional similarity based representations</strong></p>
+
+<p><strong>Class-based (hard) and soft clustering word representations</strong></p>
+
+<ul>
+<li>Brown clustering (Brown et al. 1992)<em>  Exchange clustering (Clark 2003)</em>  Desparsification and great example of unsupervised pre-training</li>
+</ul>
+
+
+<p>软分类模型学习了在每一类中都有一个单词分布:</p>
+
+<ul>
+<li>LSA</li>
+<li>LDA, HMM</li>
+</ul>
+
+
+<p><strong>Neural word embeddings as a distributed representation</strong></p>
+
+<blockquote><p>(Bengio et al. 2003, Collobert &amp; Weston 2008, Turian et al. 2010)</p></blockquote>
+
+<p>单词被表示为一个紧致的向量。</p>
+
+<p><strong>Advantages of the neural word embedding approach</strong></p>
+
+<p>neural word embeddings通过增加有监督过程更有意义。</p>
+
+<h4>1.4 非监督词向量的学习</h4>
+
+<p><strong>A neural network for learning word vectors (Collobert et al. JMLR 2011)</strong></p>
+
+<p>思路：一个单词和文本作为正样本；一个随机的单词在相同的文本中作为负样本。</p>
+
+<p>实现：</p>
+
+<blockquote><p>score(cat chills on a mat) > score(cat chills Jeju a mat)</p></blockquote>
+
+<p>怎样计算得分：</p>
+
+<ul>
+<li>应用神经网络</li>
+<li>每个词表示为n维向量</li>
+</ul>
+
+
+<p><strong>Word embedding matrix</strong></p>
+
+<p>随机初始化所有的词向量，组成word embedding matrix L: n*|V|</p>
+
+<p>从L中得到每个单词的向量：x = Le, 其中e为one-hot向量，表示单词表|V|中第i个单词。</p>
+
+<p><strong>计算得分</strong>
+score(cat chills in a mat):</p>
+
+<ul>
+<li>表示短语：从L中得到每个单词的表示，cat: n*1, chills: n*1, …</li>
+<li>连接所有单词，组成5*n的向量x: 5n*1</li>
+</ul>
+
+
+<p>3层神经网络：</p>
+
+<p>s = score(cat chills on a mat)</p>
+
+<pre><code>s = U^T*f(Wx+b), x:20,1 W:8,20 U:8,1
+s = U^T*a
+a = f(z)
+z = Wx+b
+x = [x_cat x_chills x_on x_a x_mat]
+L: n*|V|  这里n=4
+</code></pre>
+
+<p>s_c = score(cat chills Jeju a mat)</p>
+
+<p><strong>目标函数</strong></p>
+
+<p>最大化s,最小化s_c，即最小化下式：</p>
+
+<pre><code>J = max(0, 1 - s + s_c)
+</code></pre>
+
+<blockquote><pre><code>  很奇怪，为什么要定义上式，而不是max(s - s_c)
+</code></pre></blockquote>
+
+<p>它是连续的，因此可以应用SGD。</p>
+
+<p>假设损失J>0，我们可以计算s, s_c关于变量:U, W, b, x的偏导数</p>
+
+<pre><code>∂s/∂U = ∂(U^T*a)/∂U
+∂s/∂U = a
+</code></pre>
+
+<p><strong>应用后向传播训练</strong></p>
+
+<pre><code>∂s/∂W = ∂(U^T*a)/∂W = ∂/∂W(U^T*f(z)) = ∂/∂W(U^T*f(Wx+b))
+</code></pre>
+
+<p>W_ij只出现在a_i中，例如：W_23只用来计算a_2</p>
+
+<pre><code>∂/∂W_ij(U^T*a) = ∂/∂W_ij(U_i*a_i)
+∂/∂W_ij(U_i*a_i) = U_i * ∂a_i/∂W_ij
+                 = U_i * ∂a_i/∂z_i * ∂z_i/W_ij
+                 = U_i * f'(z_i) * ∂z_i/W_ij
+                 = U_i * f'(z_i) * ∂/W_ij(W_i*x+b_i)
+                 = U_i * f'(z_i) * ∂/W_ij(∑W_ik*x_k)
+                 = U_i * f'(z_i) * x_j
+                 = delta_i * x_j
+delta_i = U_i * f'(z_i) 称作‘局部误差信号’
+x_j 称作‘局部输入信号’
+</code></pre>
+
+<p>从W_ij 到W:</p>
+
+<pre><code>∂J/∂W = delta * x^T
+</code></pre>
+
+<p>对偏置单元b:</p>
+
+<pre><code>∂/∂b_i(U_i*a_i) = U_i * ∂a_i/∂b_i
+                = U_i * f'(z_i) * ∂(W_i*x+b_i)/∂b_i
+                = delta_i
+
+∂s/∂x_j = … = delta^T * W_.j
+</code></pre>
+
+<h4>1.5 后向传播训练</h4>
+
+<p>简单的链式法则：</p>
+
+<pre><code>z = f(y); y = g(x); ∂z/∂x = ∂z/∂y * ∂y/∂x
+∆z = ∂z/∂y * ∆y; ∆y = ∂y/∂x * ∆x; ∆z = ∂z/∂y * ∂y/∂x * ∆x
+</code></pre>
+
+<p>多路径链式法则：</p>
+
+<pre><code>z = f(y_1, y_2, …, y_n)
+∂z/∂x = ∑∂z/∂y_i * ∂y_i/∂x
+</code></pre>
+
+<p>Chain Rule in Flow Graph:</p>
+
+<p>Flow Graph: 任意有向非循环图</p>
+
+<ol>
+<li><p>前向传播</p></li>
+<li><p>后向传播</p></li>
+</ol>
+
+
+<h4>1.6 学习词级别的分类器：POS（词性标注）, NER(实体识别)</h4>
+
+<p><strong>模型</strong></p>
+
+<pre><code>(Collobert &amp; Weston 2008; Collobert et al. 2011)
+</code></pre>
+
+<ul>
+<li><p>类似词向量学习过程，把单个得分替换为Softmax/Maxent 分类器</p></li>
+<li><p>类似于词向量模型中，通过后向传播训练。</p></li>
+</ul>
+
+
+<h4>1.7 Sharing statistical strength</h4>
+
+<p><strong>Auto-encoders</strong></p>
+
+<p>多层神经网络，目标：output = input</p>
+
+<p>重构 = decoder(encoder(input))</p>
+
+<pre><code>a = tanh(Wx + b)
+x' = tanh(W^T*x + b)
+cost = ||x' - x||^2
+</code></pre>
+
+<p>目标： 使得重构误差最小</p>
+
+<p><strong>PCA</strong></p>
+
+<p>PCA = Linear Manifold = Linear Auto-Encoder</p>
+
+<p><strong>自编码学习凸变量，就像非线性的PCA</strong></p>
+
+<p><strong>Auto-Encoder Variants</strong></p>
+
+<p>离散输入：交叉熵或log-likelihood重构标准</p>
+
+<p>Preventing them to learn the identity everywhere:</p>
+
+<ul>
+<li><p>Undercomplete(eg PCA): boCleneck code smaller than input</p></li>
+<li><p>Sparsity: penalize hidden unit ac>va>ons so at or near 0</p></li>
+<li><p>Denoising: predict true input from corrupted input</p></li>
+<li><p>Contractive: force encoder to have small deriva>ves</p></li>
+</ul>
+
+
+<p><strong>Stacking Auto-Encoders</strong></p>
+
+<p>将多个自编码器堆积在一起，组成更复杂的非线性表示。</p>
+
+<p><strong>逐层非监督训练</strong></p>
+
+<h3>2.Recursive Neural Networks(递归神经网络)</h3>
+
+<hr />
+
+<p><strong>怎样将短语映射到向量空间中？</strong></p>
+
+<p>句子的含义由以下决定：</p>
+
+<ol>
+<li>每个词的含义</li>
+<li>词之间的组织形式</li>
+</ol>
+
+
+<p>递归神经网络可以同时学习组合式向量表示和语法树。</p>
+
+<h4>2.1 Motivation</h4>
+
+<h4>2.2 Recursive Neural Networks for Parsing语法树：</h4>
+
+<table>
+<thead>
+<tr>
+<th>符号 </th>
+<th> 含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S   </td>
+<td>句子</td>
+</tr>
+<tr>
+<td>NP  </td>
+<td>名词短语</td>
+</tr>
+<tr>
+<td>VP  </td>
+<td>动词短语</td>
+</tr>
+<tr>
+<td>PP  </td>
+<td>介词短语</td>
+</tr>
+<tr>
+<td>CP  </td>
+<td>动补词组</td>
+</tr>
+<tr>
+<td>PP  </td>
+<td>介词短语</td>
+</tr>
+<tr>
+<td>PP  </td>
+<td>介词短语</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th>规则    </th>
+<th> 含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S→NP VP </td>
+<td>表示“句子”由“名词短语 动词短语”组成</td>
+</tr>
+<tr>
+<td>NP→Det N </td>
+<td>表示“名词短语”由“冠词 名词”组成</td>
+</tr>
+<tr>
+<td>VP→VP PP </td>
+<td>表示“动词短语”由“动词短语 介词短语”组成</td>
+</tr>
+<tr>
+<td>VP→V NP</td>
+<td>表示“动词短语”由“动词 名词短语”组成</td>
+</tr>
+<tr>
+<td>PP→Prep NP</td>
+<td> 表示“介词短语”由“介词 名词短语”组成</td>
+</tr>
+<tr>
+<td>Det→the/a </td>
+<td> 表示“冠词”由the 或 a 组成</td>
+</tr>
+<tr>
+<td>N→girl/letter/pencil </td>
+<td> 表示“名词”由girl/letter/pencil</td>
+</tr>
+<tr>
+<td>V→write </td>
+<td>表示“动词”由write组成</td>
+</tr>
+<tr>
+<td>Prep→with</td>
+<td>表示“介词”由with组成</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>递归神经网络用语结构化预测</strong></p>
+
+<ul>
+<li>输入：两个候选表示</li>
+<li>输出：父节点表示p；父节点的可信度score=U<sup>T</sup>*p</li>
+</ul>
+
+
+<p>应用RNN分解句子：</p>
+
+<pre><code>    x = (x1, …, xn)
+</code></pre>
+
+<ol>
+<li>分别计算score(x1, x2), …, score(x_n-1, x_n)</li>
+<li><p>取分数最大者合并，比如 （x1, x_2）--> x_1'</p>
+
+<pre><code> x = (x_1', x3, …, x_n)
+</code></pre></li>
+<li><p>重复上述两个步骤，直至合并完成。</p></li>
+</ol>
+
+
+<p><strong>Max-Margin Framework-Details</strong></p>
+
+<h4>2.3 Theory: Backpropagation Through Structure</h4>
+
+<p><strong>Backpropagation Through Structure BTS</strong></p>
+
+<p><strong>Scene Parsing</strong></p>
+
+<p>原理：组合性</p>
+
+<p>算法：Same Recursive Neural Network as for natural language parsing! (Socher et al. ICML 2011)</p>
+
+<p>多类别切分</p>
+
+<h4>2.4 Recursive Autoencoders(RAE)<strong>递归自编码器:</strong></h4>
+
+<p>取代有监督的打分，我们在每个节点上计算重构误差：
+    E_rec([c1;c2]) = 1/2||[c1;c2] - [c1';c2']||^2
+<strong>半监督递归自编码器:</strong><em> 为了得到情感分析和反义词问题，增加softmax分类器</em> 误差：重构误差和cross-entropy的加权平均<strong>情感检测:</strong>* 多数方法基于<code>词袋模型</code>+<code>语言学特征/处理/词典</code>。</p>
+
+<ul>
+<li>上述方法不能分辨出：    * 正面(+) white blood cells destroying an infection
+
+<ul>
+<li>负面(-) an infection destroying white blood cells
+
+<h4>2.5 应用到情感分析和Paraphrase Detection</h4></li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>怎样比较两句话的含义？</strong></p>
+
+<p>Unsupervised Unfolding RAE and a pair-wise sentence comparison of nodes in parsed trees， Socher et al. (NIPS 2011)</p>
+
+<h4>2.6 Compositionality Through Recursive Matrix-VectorSpaces</h4>
+
+<p>Recursive Matrix-Vector Model：</p>
+
+<pre><code>p = tanh(W[c1 c2]^T + b)
+==&gt;
+p = tanh(W[C2c1 C1c2]^T + b)
+</code></pre>
+
+<h4>2.7 Relation classification</h4>
+
+<p><strong>MV-RNN (Matrix Vector RNN)</strong></p>
+
+<pre><code>www.socher.org
+</code></pre>
+
+<h3>3.应用，讨论，相关资料</h3>
+
+<hr />
+
+<p><strong>已存在的NLP应用:</strong></p>
+
+<ul>
+<li>语言模型
+
+<ul>
+<li>语音识别</li>
+<li>机器翻译</li>
+</ul>
+</li>
+<li>词性标注（Part-of-Speech Tagging）</li>
+<li>chunking ??</li>
+<li>实体识别(Named Entity Recognition)</li>
+<li>语义角色标注(Semantic Role Labeling)</li>
+<li>情感分析(Sentiment Analysis)</li>
+<li>Paraphrasing ??</li>
+<li>问答系统(Question-Answering)</li>
+<li>语义消歧(Word-Sense Disambiguation)</li>
+</ul>
+
+
+<h4>3.1 应用</h4>
+
+<h5>3.1.1 自然语言模型</h5>
+
+<ul>
+<li>预测P(next word|previous word)</li>
+<li>计算长句子的概率</li>
+<li>应用到语音，翻译，压缩</li>
+<li>计算瓶颈：大词表V意味着计算输出：#隐含层*|V|</li>
+</ul>
+
+
+<p><strong>Neural Language Model:</strong></p>
+
+<pre><code>Bengio “A Neural Probabilistic Language Model”
+</code></pre>
+
+<ul>
+<li>每个词表示为连续值的分布</li>
+<li>Generalizes to sequences of words that are semantically similar to training sequences</li>
+</ul>
+
+
+<p><strong>Recurrent Neural Net Language Modeling for ASR</strong></p>
+
+<pre><code>Mikolov et al 2011
+http://www.fit.vutbr.cz/~imikolov/rnnlm
+</code></pre>
+
+<p><strong>Neural Net Language Modeling for ASR</strong></p>
+
+<pre><code>Schwenk 2007
+</code></pre>
+
+<p><strong>应用到统计机器翻译</strong></p>
+
+<pre><code>http://lium.univ-lemans.fr/cslm/
+</code></pre>
+
+<h5>3.1.2 Structured embedding of knowledge bases</h5>
+
+<ol>
+<li>Learning Structured Embeddings of Knowledge Bases, (Bordes,Weston, Collobert &amp; Bengio, AAAI 2011）</li>
+<li>Joint Learning of Words and Meaning Representations for OpenaText Semantic Parsing, (Bordes,Glorot,Weston &amp; Bengio, AISTATS 2012)</li>
+</ol>
+
+
+<h5>3.1.3 Assorted Speech and NLP Applications</h5>
+
+<p><strong>Learning Multiple Word Vectors</strong></p>
+
+<p>neural word vector</p>
+
+<p><strong>可视化</strong>学习的词向量(Huang et al.(ACL2012))</p>
+
+<p>非监督的预训练（比如DBN, RBM堆积起来），有监督的微调。</p>
+
+<h4>3.2 相关资料(readings, code)</h4>
+
+<p><img src="/images//2013-10-18-tutorial.png" alt="image" /></p>
+
+<p><img src="/images//2013-10-18-software.png" alt="image" /></p>
+
+<h4>3.3 Deep Learning Tricks</h4>
+
+<p><strong>“Practical Recommendations for Gradient-Based Training of Deep Architectures” Y. Bengio (2012),</strong></p>
+
+<ul>
+<li>非监督预训练</li>
+<li>SGD,设置学习速率</li>
+<li>主要的超参数
+
+<ul>
+<li>Learning rate schedule &amp; Early stopping</li>
+<li>Minibatches</li>
+<li>参数初始化</li>
+<li>隐含层的个数</li>
+<li>L1,L2权重衰退</li>
+<li>Sparsity regularization</li>
+</ul>
+</li>
+<li>Debugging --> "Finite difference gradient check (Yay)</li>
+<li>怎样有效的设置超参数</li>
+</ul>
+
+
+<p><strong>非线性函数</strong></p>
+
+<p><img src="/images//2013-10-18-log-tanh.png" alt="image" /></p>
+
+<p><strong>tanh 是最常用的，在深度网络中表现最好！</strong></p>
+
+<p><img src="/images//2013-10-18-other-non-linear.png" alt="image" /></p>
+
+<p><strong>SGD</strong></p>
+
+<ul>
+<li>梯度下降一次迭代应用所有的样本</li>
+<li>随机梯度下降一次迭代只应用一个样本</li>
+<li>传统的梯度下降是batch方法，一次迭代过程非常慢，<code>一般不用</code>.</li>
+<li>Use 2<sup>nd</sup> order batch method such as <code>LBFGS</code>.</li>
+<li>对大数据集，SGD方法优于所有的batch方法；对小数据集，<code>LBFGS</code>或<code>Conjugat Gradients</code>优于<code>Large-batch LBFGS</code>。</li>
+</ul>
+
+
+<p><strong>Learning Rates</strong></p>
+
+<ul>
+<li>简单原则：固定为常数，对所有参数应用相同值</li>
+<li>Collobert scales them by the inverse of square root of the fan-in of each neuron</li>
+<li>Better results can generally be obtained by allowing learning  rates to decrease, typically in O(1/t) because of theoretical  convergence guarantees, e.g.,</li>
+</ul>
+
+
+<p><img src="/images//2013-10-18-rate.png" alt="image" /></p>
+
+<p><strong>Long-term dependencies and clipping trick</strong></p>
+
+<ul>
+<li>在深度网络中，比如RNN，梯度为一组Jacobian矩阵的乘积。它很容易变得过大或过小，使得梯度下降的局部假设失效。</li>
+<li>解决方案是：clip gradients to a maximum value --by Mikolov</li>
+</ul>
+
+
+<p><strong>参数初始化</strong></p>
+
+<ul>
+<li>初始化隐含层偏置项为0，输出偏置项为最优值，如果权重0.</li>
+<li>初始值~Uniform(-r, r)</li>
+<li>r = sqrt(6/(fan-in + fan-out)) for tanh units; 4 * bigger for sigmoid units</li>
+</ul>
+
+
+<p>注：对for embedding weights, fan-in=1 and we don’t care about fan-out, Collobert uses Uniform(-1,1).</p>
+
+<h4>3.4 讨论：局限性，优势，未来研究方向</h4>
+
+	  
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
 <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-10-17T00:00:00+08:00" itemprop="datePublished"><a href="http://nipengadmaster.github.io//%E7%AC%94%E8%AE%B0/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA">October 17, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://nipengadmaster.github.io//about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span></div><!-- /.entry-meta -->
@@ -431,6 +1156,131 @@ var _hmt = _hmt || [];
 
 <p>努力吧，
 为了自己！</p>
+
+	  
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2011-03-10T00:00:00+08:00" itemprop="datePublished"><a href="http://nipengadmaster.github.io//sample-post">March 10, 2011</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://nipengadmaster.github.io//about" title="About Ni Peng" itemprop="url">Ni Peng</a></span></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title" itemprop="name"><a href="http://nipengadmaster.github.io//sample-post" rel="bookmark" title="Sample Post" itemprop="url">Sample Post</a></h1>
+    
+  </header>
+  <div class="entry-content" itemprop="description">
+	  
+			<p>Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.<a href="hahaha">^2</a></p>
+
+<h1>Heading 1</h1>
+
+<h2>Heading 2</h2>
+
+<h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+<h3>Body text</h3>
+
+<p>Lorem ipsum dolor sit amet, test link adipiscing elit. <strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam.</p>
+
+<p><img src="http://nipengadmaster.github.io//images/3953273590_704e3899d5_m.jpg" alt="Smithsonian Image" />
+{: .pull-right}</p>
+
+<p><em>This is emphasized</em>. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times <cite>(That’s a citation)</cite>. <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+<p>HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+
+<h3>Blockquotes</h3>
+
+<blockquote><p>Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.</p></blockquote>
+
+<h2>List Types</h2>
+
+<h3>Ordered Lists</h3>
+
+<ol>
+<li>Item one
+
+<ol>
+<li>sub item one</li>
+<li>sub item two</li>
+<li>sub item three</li>
+</ol>
+</li>
+<li>Item two</li>
+</ol>
+
+
+<h3>Unordered Lists</h3>
+
+<ul>
+<li>Item one</li>
+<li>Item two</li>
+<li>Item three</li>
+</ul>
+
+
+<h2>Tables</h2>
+
+<p>| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|----
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3
+{: rules="groups"}</p>
+
+<h2>Code Snippets</h2>
+
+<p>Syntax highlighting via Pygments</p>
+
+<div class="highlight"><pre><code class="css"><span class="nf">#container</span> <span class="p">{</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Non Pygments code example<a href="hahaha">^2</a></p>
+
+<pre><code>&lt;div id="awesome"&gt;
+    &lt;p&gt;This is great isn't it?&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>Buttons</h2>
+
+<p>Make any link standout more when applying the <code>.btn</code> class.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-success&quot;</span><span class="nt">&gt;</span>Success Button<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+
+
+
+<div markdown="0"><a href="#" class="btn">Primary Button</a></div>
+
+
+<div markdown="0"><a href="#" class="btn btn-success">Success Button</a></div>
+
+
+<div markdown="0"><a href="#" class="btn btn-warning">Warning Button</a></div>
+
+
+<div markdown="0"><a href="#" class="btn btn-danger">Danger Button</a></div>
+
+
+<div markdown="0"><a href="#" class="btn btn-info">Info Button</a></div>
+
 
 	  
   </div><!-- /.entry-content -->
