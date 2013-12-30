@@ -2,7 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><\!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include head.html %}
 </head>
@@ -19,8 +19,7 @@
 	{% else %}
 		<div class="entry-image"><img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}" itemprop="image">
 	{% endif %}
-    {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><\!-- /.image-credit -\->{% endif %}
-
+    {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 {% endif %}
@@ -56,15 +55,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}
+{% include scripts.html %}          
 
 </body>
 </html>
-
-
-<section class="post">
-{{ content }}
-</section>
-{% if page.comments %}
-{% include comments.md %}
-{% endif %}
