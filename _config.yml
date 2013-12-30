@@ -5,6 +5,8 @@ description:      因为太没有安全感 才要找地方写下一些东西
 # Comment out url when working locally to resolve base urls correctly
 # url: http://eureland.tk
 
+img_url: /images/
+
 # Owner/author information
 owner:
   name:           Ni Peng
