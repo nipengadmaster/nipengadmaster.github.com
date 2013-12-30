@@ -1,6 +1,6 @@
 auto: true
 title:            Scott Ni
-description:      因为太没有安全感 才要找地方写下一些东西
+# description:    ""
 # disqus_shortname: ScottNi
 # Comment out url when working locally to resolve base urls correctly
 
@@ -12,7 +12,7 @@ img_url: /images/
 owner:
   name:           Ni Peng
   avatar:         np.jpg
-#  bio:            "人生就是不停的战斗，即使天寒地冻，路远马亡。"
+#  bio:           ""
   email:          nipengmath@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
@@ -54,10 +54,10 @@ permalink:   /:categories/:title
 # Amount of post to show on home page
 paginate: 5
 
- # comments :
-  #  provider : duoshuo
-    #disqus :
-     # short_name : jekyllbootstrap
+# comments :
+#    provider : duoshuo
+#    disqus :
+#      short_name : jekyllbootstrap
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
