@@ -4,10 +4,14 @@ title:            Scott Ni
 # disqus_shortname: ScottNi
 # Comment out url when working locally to resolve base urls correctly
 
-url: http://nipengadmaster.github.io/
+# url: http://nipengadmaster.github.io/
 
 img_url: /images/
-duoshuo: nipengadmaster
+
+# duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: nipengadmaster
+
 # Owner/author information
 owner:
   name:           Ni Peng
